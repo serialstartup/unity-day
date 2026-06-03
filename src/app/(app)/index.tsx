@@ -1,5 +1,6 @@
 import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { useRouter } from 'expo-router'
 import { mockGroups, mockTransactions, mockUser } from '@/data/mock'
 
 function getTransactionLabel(type: string): string {
@@ -39,6 +40,8 @@ const initials = mockUser.fullName
   .join('')
 
 export default function HomeScreen() {
+  const router = useRouter()
+
   return (
     <SafeAreaView className="flex-1 bg-background">
       <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
@@ -115,9 +118,11 @@ export default function HomeScreen() {
                 const periodLabel = group.periodType === 'weekly' ? 'Hafta' : 'Ay'
 
                 return (
-                  <View
+                  <TouchableOpacity
                     key={group.id}
                     className="mr-3 w-72 bg-surface rounded-3xl border border-border p-5"
+                    onPress={() => router.push(`/(app)/groups/${group.id}` as any)}
+                    activeOpacity={0.9}
                   >
                     <View className="flex-row items-start justify-between mb-3">
                       <View className="w-12 h-12 rounded-2xl bg-[#ffdea4] items-center justify-center">
@@ -157,7 +162,7 @@ export default function HomeScreen() {
                         </Text>
                       </View>
                     </View>
-                  </View>
+                  </TouchableOpacity>
                 )
               })}
             </ScrollView>
