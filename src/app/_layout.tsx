@@ -12,7 +12,7 @@ import { useEffect } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
-const IS_AUTHENTICATED = false; // Mock auth state — Supabase entegrasyonunda değişecek
+const IS_AUTHENTICATED = true; // TODO: Replace with Supabase session check
 
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts({
