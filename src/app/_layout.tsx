@@ -25,13 +25,9 @@ export default function RootLayout() {
   const segments = useSegments();
 
   useEffect(() => {
-    if (fontsLoaded || fontError) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded, fontError]);
-
-  useEffect(() => {
     if (!fontsLoaded && !fontError) return;
+
+    SplashScreen.hideAsync();
 
     const inAuthGroup = segments[0] === "(auth)";
     const inAppGroup = segments[0] === "(app)";
@@ -43,9 +39,6 @@ export default function RootLayout() {
     }
   }, [fontsLoaded, fontError, segments]);
 
-  if (!fontsLoaded && !fontError) {
-    return null;
-  }
-
+  // Always render Slot — splash screen handles loading state while fonts are loading
   return <Slot />;
 }
