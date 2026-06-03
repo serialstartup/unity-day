@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aramıza Katıl - Dijital Altın Günü</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fcf9f8",
+                      "tertiary": "#006e1c",
+                      "surface-dim": "#dcd9d9",
+                      "primary": "#7b5900",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#eae7e7",
+                      "secondary-fixed": "#e4e2dd",
+                      "primary-fixed-dim": "#f0bf5c",
+                      "inverse-surface": "#303030",
+                      "surface-container": "#f0eded",
+                      "surface-container-highest": "#e4e2e1",
+                      "on-surface-variant": "#4e4637",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#f0bf5c",
+                      "on-tertiary-fixed": "#002204",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#005313",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1b1c1c",
+                      "on-secondary-fixed": "#1b1c19",
+                      "tertiary-container": "#53b656",
+                      "outline": "#807665",
+                      "tertiary-fixed-dim": "#78dc77",
+                      "on-primary-fixed": "#261900",
+                      "on-surface": "#1b1c1c",
+                      "secondary-fixed-dim": "#c8c6c2",
+                      "outline-variant": "#d2c5b1",
+                      "secondary": "#5e5e5b",
+                      "on-primary-fixed-variant": "#5d4200",
+                      "on-secondary-container": "#63635f",
+                      "tertiary-fixed": "#94f990",
+                      "surface-bright": "#fcf9f8",
+                      "surface": "#fcf9f8",
+                      "primary-container": "#c89b3c",
+                      "surface-container-low": "#f6f3f2",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#7b5900",
+                      "primary-fixed": "#ffdea4",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e4e2e1",
+                      "on-tertiary-container": "#00420d",
+                      "on-secondary-fixed-variant": "#474744",
+                      "inverse-on-surface": "#f3f0f0",
+                      "on-primary-container": "#4b3500",
+                      "secondary-container": "#e1dfdb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-gap-lg": "40px",
+                      "container-padding-mobile": "20px",
+                      "container-padding-desktop": "40px",
+                      "base": "8px",
+                      "stack-gap-md": "24px",
+                      "stack-gap-sm": "12px",
+                      "section-margin": "48px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-sm": ["Plus Jakarta Sans"],
+                      "label-md": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layering {
+            background: #ffffff;
+            border: 1px solid #E7E2DA;
+            box-shadow: 0px 10px 30px rgba(200, 155, 60, 0.08);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex min-h-screen flex-col items-center">
+<!-- Top App Bar (Suppressing Navigation for Transactional Screen) -->
+<header class="w-full top-0 left-0 sticky z-50 bg-background dark:bg-background flex items-center justify-between px-container-padding-mobile py-4 max-w-full">
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md-mobile text-primary tracking-tight">Dijital Altın Günü</h1>
+<div class="w-6"></div> <!-- Spacer for center alignment -->
+</header>
+<main class="flex-1 w-full max-w-[1200px] flex flex-col items-center justify-center px-container-padding-mobile py-stack-gap-lg">
+<!-- Illustration Section -->
+<div class="mb-stack-gap-lg text-center animate-float">
+<div class="relative inline-block">
+<div class="bg-primary-fixed w-32 h-32 rounded-full flex items-center justify-center overflow-hidden">
+<img alt="Community togetherness" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="A warm and heartwarming illustration of a diverse group of smiling friends sitting together in a cozy, sun-drenched modern living room. The style is soft, tactile digital art with a focus on warm golden hour lighting and a pastel color palette of cream, gold, and soft brown. The atmosphere evokes feelings of deep social trust, friendship, and shared community prosperity, perfectly aligned with a premium modern wellness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUcHxJtQHhx_3bq_l5QN6GK8XrvpudJ9DOvo8TPeUTGjSuDPZN5sbamquD3JKI--jc3_G5SQyFfSRofAog7GlBDBHdufowjbgy658a-4BC9wWWxRK2rqFET1f3YRrcYV2zHFW0LTlaCawHNk-VIIuDonKTXUtTnd4KUByrL71ZG34nMdmApfA8PCgnfCQM3T1VvBvgeu63LpFh_5nyc2-4iym0at3x-HparWws6nBRvLr-5nFFhoFtVqfusM1BuPOmi18E-4tQK_jN"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-tertiary-container text-on-tertiary-container p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[24px]">group</span>
+</div>
+</div>
+</div>
+<!-- Content Header -->
+<div class="text-center max-w-md mb-stack-gap-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-2">Aramıza Katıl</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tasarruf yolculuğuna başlamak için telefon numaranı doğrula.</p>
+</div>
+<!-- Verification Form -->
+<div class="w-full max-w-md tonal-layering rounded-[24px] p-6 md:p-8">
+<form class="space-y-stack-gap-md" id="verification-form">
+<!-- Phone Input Group -->
+<div class="flex flex-col gap-base">
+<label class="font-label-md text-label-md text-on-surface-variant px-1" for="phone">Telefon Numaran</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="font-body-md text-body-md">+90</span>
+</div>
+<input class="w-full h-[56px] pl-16 pr-5 bg-background border-[#E7E2DA] border rounded-[20px] focus:ring-primary focus:border-primary font-body-lg text-body-lg transition-all" id="phone" maxlength="13" placeholder="5xx xxx xx xx" required="" type="tel"/>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-[56px] bg-primary-container text-on-primary-container font-headline-sm text-headline-sm rounded-[20px] active:scale-95 duration-200 hover:opacity-90 shadow-sm transition-all flex items-center justify-center gap-2" type="submit">
+<span>Doğrulama Kodu Gönder</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<!-- Disclaimer -->
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant opacity-70">
+                    Devam ederek Kullanım Koşulları ve Gizlilik Politikamızı kabul etmiş olursun.
+                </p>
+</form>
+</div>
+<!-- Benefit Badges (Asymmetric Layout) -->
+<div class="mt-section-margin grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md w-full max-w-2xl">
+<div class="flex items-start gap-4 p-4">
+<div class="bg-secondary-container p-3 rounded-[16px]">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Güvenli Altyapı</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Birikimlerin banka güvencesiyle korunur.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4">
+<div class="bg-secondary-container p-3 rounded-[16px]">
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Yardımlaşma Kültürü</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Geleneksel altın gününü dijitalde yaşa.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Script for Input Masking Micro-interaction -->
+<script>
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', (e) => {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '') + (x[4] ? ' ' + x[4] : '');
+        });
+
+        document.getElementById('verification-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Trigger micro-interaction animation
+            const btn = e.target.querySelector('button');
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span>';
+            setTimeout(() => {
+                alert('Doğrulama kodu başarıyla gönderildi!');
+                btn.innerHTML = '<span>Doğrulama Kodu Gönder</span><span class="material-symbols-outlined">chevron_right</span>';
+            }, 1500);
+        });
+    </script>
+</body></html>

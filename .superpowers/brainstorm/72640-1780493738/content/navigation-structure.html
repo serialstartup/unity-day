@@ -1,0 +1,87 @@
+<h2>Navigasyon Yapısı</h2>
+<p class="subtitle">Expo Router ile dosya tabanlı routing. Auth ve ana uygulama iki ayrı stack.</p>
+
+<div class="mockup">
+  <div class="mockup-header">src/app/ — Dosya Yapısı</div>
+  <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.8">
+    <div style="color:#888">src/app/</div>
+    <div style="margin-left:16px">
+      <div><span style="color:#c89b3c">_layout.tsx</span> <span style="color:#888">— Root layout (font yükleme, splash screen)</span></div>
+      <div style="margin-top:8px">
+        <div><span style="color:#53b656">(auth)/</span> <span style="color:#888">— Auth group (tab bar yok)</span></div>
+        <div style="margin-left:16px">
+          <div>_layout.tsx <span style="color:#888">— Stack navigator</span></div>
+          <div>login.tsx</div>
+          <div>signup-phone.tsx</div>
+          <div>signup-profile.tsx</div>
+          <div>signup-success.tsx</div>
+          <div>onboarding.tsx</div>
+        </div>
+      </div>
+      <div style="margin-top:8px">
+        <div><span style="color:#53b656">(app)/</span> <span style="color:#888">— Ana uygulama (tab bar var)</span></div>
+        <div style="margin-left:16px">
+          <div>_layout.tsx <span style="color:#888">— Tab navigator (5 tab)</span></div>
+          <div>index.tsx <span style="color:#888">— Home / Gruplarım</span></div>
+          <div>activity.tsx <span style="color:#888">— Hareketler</span></div>
+          <div>contribute.tsx <span style="color:#888">— Deme Yap (FAB)</span></div>
+          <div>history.tsx <span style="color:#888">— Geçmiş</span></div>
+          <div>profile.tsx <span style="color:#888">— Profil</span></div>
+          <div style="margin-top:4px">
+            <div>groups/ <span style="color:#888">— Grup sayfaları</span></div>
+            <div style="margin-left:16px">[id].tsx <span style="color:#888">— Grup detay</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:24px" class="mockup">
+  <div class="mockup-header">Akış Diyagramı</div>
+  <div class="mockup-body">
+    <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+      <!-- Auth Flow -->
+      <div style="flex:1;min-width:200px">
+        <div style="background:#53b65620;border:1px solid #53b656;border-radius:8px;padding:12px;text-align:center">
+          <div style="font-weight:700;color:#53b656;font-size:12px;letter-spacing:0.1em;margin-bottom:8px">AUTH STACK</div>
+          <div style="background:white;border:1px solid #e1dfdb;border-radius:6px;padding:8px;margin:4px 0;font-size:13px">Login</div>
+          <div style="color:#888;font-size:11px">↓</div>
+          <div style="background:white;border:1px solid #e1dfdb;border-radius:6px;padding:8px;margin:4px 0;font-size:13px">Signup (3 adım)</div>
+          <div style="color:#888;font-size:11px">↓</div>
+          <div style="background:white;border:1px solid #e1dfdb;border-radius:6px;padding:8px;margin:4px 0;font-size:13px">Onboarding</div>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="display:flex;align-items:center;padding-top:60px;font-size:20px;color:#c89b3c">→</div>
+
+      <!-- Main App -->
+      <div style="flex:2;min-width:280px">
+        <div style="background:#c89b3c20;border:1px solid #c89b3c;border-radius:8px;padding:12px">
+          <div style="font-weight:700;color:#c89b3c;font-size:12px;letter-spacing:0.1em;margin-bottom:8px">ANA UYGULAMA (TAB BAR)</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <div style="background:white;border:1px solid #e1dfdb;border-radius:6px;padding:8px 12px;font-size:12px;text-align:center">
+              <div>🏠</div><div>Home</div>
+            </div>
+            <div style="background:white;border:1px solid #e1dfdb;border-radius:6px;padding:8px 12px;font-size:12px;text-align:center">
+              <div>📋</div><div>Hareketler</div>
+            </div>
+            <div style="background:#c89b3c;border-radius:6px;padding:8px 12px;font-size:12px;text-align:center;color:white">
+              <div>⬆️</div><div>Deme Yap</div>
+            </div>
+            <div style="background:white;border:1px solid #e1dfdb;border-radius:6px;padding:8px 12px;font-size:12px;text-align:center">
+              <div>📜</div><div>Geçmiş</div>
+            </div>
+            <div style="background:white;border:1px solid #e1dfdb;border-radius:6px;padding:8px 12px;font-size:12px;text-align:center">
+              <div>👤</div><div>Profil</div>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:12px;color:#888">↘ groups/[id].tsx — Grup Detay (Stack modal)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px">Auth durumuna göre root layout yönlendirme yapar: oturum yoksa <code>(auth)/login</code>, varsa <code>(app)/</code>. Supabase hazır olduğunda bu kontrol gerçek session'a bağlanır, şimdilik mock flag ile çalışır.</p>

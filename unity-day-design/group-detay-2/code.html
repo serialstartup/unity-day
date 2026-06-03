@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F3;
+        }
+        .soft-shadow {
+            box-shadow: 0px 10px 30px rgba(200, 155, 60, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #E7E2DA;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#e1dfdb",
+                      "tertiary-fixed-dim": "#78dc77",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1b1c1c",
+                      "on-tertiary-fixed-variant": "#005313",
+                      "primary-fixed-dim": "#f0bf5c",
+                      "tertiary-container": "#53b656",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#474744",
+                      "on-secondary-container": "#63635f",
+                      "surface-container-highest": "#e4e2e1",
+                      "surface-container": "#f0eded",
+                      "on-secondary-fixed": "#1b1c19",
+                      "inverse-surface": "#303030",
+                      "on-primary-fixed-variant": "#5d4200",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#4b3500",
+                      "surface-bright": "#fcf9f8",
+                      "secondary": "#5e5e5b",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#f0bf5c",
+                      "tertiary": "#006e1c",
+                      "surface-container-high": "#eae7e7",
+                      "secondary-fixed": "#e4e2dd",
+                      "surface-dim": "#dcd9d9",
+                      "surface": "#fcf9f8",
+                      "inverse-on-surface": "#f3f0f0",
+                      "surface-tint": "#7b5900",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#c89b3c",
+                      "on-primary-fixed": "#261900",
+                      "tertiary-fixed": "#94f990",
+                      "surface-variant": "#e4e2e1",
+                      "outline": "#807665",
+                      "surface-container-low": "#f6f3f2",
+                      "on-tertiary-container": "#00420d",
+                      "on-tertiary-fixed": "#002204",
+                      "on-surface-variant": "#4e4637",
+                      "outline-variant": "#d2c5b1",
+                      "secondary-fixed-dim": "#c8c6c2",
+                      "on-background": "#1b1c1c",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#ffdea4",
+                      "background": "#fcf9f8",
+                      "primary": "#7b5900"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-margin": "48px",
+                      "stack-gap-md": "24px",
+                      "stack-gap-sm": "12px",
+                      "container-padding-mobile": "20px",
+                      "base": "8px",
+                      "container-padding-desktop": "40px",
+                      "stack-gap-lg": "40px"
+              },
+              "fontFamily": {
+                      "label-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "body-sm": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-sm": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface flex justify-between items-center px-container-padding-mobile py-4">
+<div class="flex items-center gap-3">
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200" onclick="history.back()">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm-mobile text-primary font-bold">Pazar Kahvaltısı Grubu</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary hover:opacity-80 cursor-pointer">notifications</span>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-secondary-container">
+<img class="w-full h-full object-cover" data-alt="A high-quality studio headshot of a smiling young professional man with a friendly expression. The lighting is soft and warm, reflecting a light-mode UI aesthetic with clean, bright tones. The background is a soft, out-of-focus neutral cream color that enhances the warm, community-driven feel of the application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHl3qMKJbyHVpOqz5KKb7qXLYC8plOJ6BlVOjucUUUov9B18XxnqZ8JUGhVYega1aq8WMzd5Rd5CPy_9sLGYMTITaMqOTyvEoj-mVP5Puju3IkmIY7H_FM9FTXHu3iwqY6A69yDRTmimXf-lV00nN1KPcpgFeAYmlTgBLGilCvSGj_jrm4uxgPM_mEhIQ3rgmYWxajxkhYJ07EtXLPcJ32gkf3S7tpJVEanB1gU98M5mYA8Mxm1yIMIapojo3XS0iVEZUuEfK5k7l1"/>
+</div>
+</div>
+</header>
+<main class="mt-20 px-container-padding-mobile max-w-screen-xl mx-auto space-y-stack-gap-lg">
+<!-- Pot Summary Hero Section -->
+<section class="relative overflow-hidden bg-white border border-outline-variant rounded-[24px] p-6 soft-shadow flex flex-col items-center text-center">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-32 h-32 bg-tertiary/10 rounded-full blur-3xl"></div>
+<p class="font-label-md text-label-md text-secondary mb-2">Toplam Biriken Miktar</p>
+<h2 class="font-headline-lg text-headline-lg text-primary-container font-extrabold mb-4">4.250 ₺</h2>
+<div class="w-full h-[12px] bg-secondary-fixed rounded-full overflow-hidden mb-2">
+<div class="h-full bg-primary-container rounded-full" style="width: 70%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Bu ayki hedefin %70'ine ulaşıldı</p>
+</section>
+<!-- Next Recipient Card -->
+<section class="space-y-stack-gap-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface px-1">Sıradaki Alıcı</h3>
+<div class="bg-white border border-outline-variant rounded-[24px] p-6 soft-shadow flex items-center gap-6">
+<div class="relative">
+<div class="w-20 h-20 rounded-full p-1 border-2 border-tertiary-container ring-4 ring-tertiary-container/10">
+<img class="w-full h-full rounded-full object-cover" data-alt="Close-up portrait of a cheerful middle-aged woman with a warm, trustworthy smile. She is set against a bright, airy background with soft morning sunlight. The visual style is modern tactile, using warm hues and high-quality whitespace, evoking a sense of social trust and community prosperity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfuRbQvK3hVAUI3ZmPDO5TL5O9b_Bx6TE-QU3iyAu_ZsKqV8xEUSXEcZxUwirjqBQ_04A5p--LYK7qr0LVOhYqjrw8nVDzp4AyFI5ZIzrZoPifR_enYtxE8W7k9V9Kne1PyedYZrkmun1m6-76X_Z0yZ2JUueiz4OoRUgKPaQc74flr_0TKKBCcBldpVC1264Ullb194umm2USzHiBtFh21B5OLLHgUgqhN0xTsRI8-yrPwbYpTJ6C4K2a6wZfgIGrLfee0NiGWP8k"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-tertiary-container text-white p-1 rounded-full flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="font-headline-sm text-headline-sm text-on-surface">Zeynep Demir</p>
+<p class="font-body-sm text-body-sm text-secondary mb-1">Teslimat Tarihi: 12 Nisan</p>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-tertiary-container/10 text-tertiary">
+                        Hazırlanıyor
+                    </span>
+</div>
+<div class="hidden md:block">
+<button class="px-6 h-12 rounded-[20px] bg-surface-container border border-outline-variant text-on-surface font-semibold hover:bg-secondary-container/20 transition-all">
+                        Mesaj Gönder
+                    </button>
+</div>
+</div>
+</section>
+<!-- Members Bento Grid -->
+<section class="space-y-stack-gap-sm">
+<div class="flex justify-between items-center px-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Grup Üyeleri (8)</h3>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1">Tümünü Gör <span class="material-symbols-outlined text-[18px]">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Member 1: Contributed -->
+<div class="bg-white border border-outline-variant rounded-[24px] p-4 flex flex-col items-center space-y-2 hover:scale-[1.02] transition-transform">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young man with a friendly, welcoming demeanor. He is photographed in a bright, modern setting with soft natural light. The aesthetic is warm and community-focused, consistent with a social savings platform that values interpersonal connections and transparency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL6ONE8C1k2YrqWW_naua3pVMCR0HB9pt4wZrf5WGyYpqu-Kt9nRp-k7loVKRK9cubfGZ5D9oo8tk3VrytC30FI1h4Qf6OB0BTBiO81TdySOC-V3AJ2M4bANL7TA4wT8kMsLdCVGHdeTWl52M97vYNt2MTC2vfCtlASxV-ooy03BkGo8hKq4So59XDG-38L8YpsRxWRUDEkRBqrPN2LQ7eyd16tXiIfqrrS0C0TdLUg2vTz37dmRcnSwRKgNHqDYE9j4uVPGnd-O4j"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-tertiary-container rounded-full border-2 border-white"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Ahmet Y.</p>
+<p class="text-[10px] text-tertiary font-bold tracking-wider">ÖDENDİ</p>
+</div>
+<!-- Member 2: Pending -->
+<div class="bg-white border border-outline-variant rounded-[24px] p-4 flex flex-col items-center space-y-2 hover:scale-[1.02] transition-transform">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a professional woman with a kind and confident expression, set against a minimalist and bright background. The lighting is high-key and soft, fitting a modern tactile UI design that prioritizes accessibility and human-centric vibes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5wArBpKYYHGcc6r6ODMvhE-QeFwNXWqwQlsCzVtTlox2QAbFPyPx20IL1BOHT8OyDg9wJ9YGNB1ltVJyDBqqERwtnFB-5Er-ALlgFa9qC7u8OGOPCHep6iQMMISy3Pyl0040EPD-8_d7KSkTDZDwIaa4YKqvy8Sl54BL9iQ1tTq1hSfEKLOYTel5V_Suxq0oULOCciGXuGCUknWdhnFple6SFoe3jLRhcUs1dAhQfawKPLYQWEtA81mB-vWiH7anEHlSjSimI0VNo"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary-container rounded-full border-2 border-white animate-pulse"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Merve K.</p>
+<p class="text-[10px] text-primary-container font-bold tracking-wider">BEKLİYOR</p>
+</div>
+<!-- Member 3: Contributed -->
+<div class="bg-white border border-outline-variant rounded-[24px] p-4 flex flex-col items-center space-y-2 hover:scale-[1.02] transition-transform">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a smiling older man, radiating wisdom and community spirit. He is in a soft-lit, comfortable environment that feels like a modern Turkish living room. The visual style is safe, serene, and professional, using a warm color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc4OMd--P-yVh0gSvGePFAE7OKADRNjrFnpxvcpFmLV6UJlxUWB1n_TMSvAXpy1BfFJ4Rnp6Dx7ZGUtDO3oAwpBNxeVKNvbo7sCnJjFBxFWAZUwHIOg-z-1TahMnvVqQCofCjjxsHub5UUvUe91CY-cmQPcld_dgrAJffknLr8bPxfQnwnM_l80z34ZCIPj-R68uv_zlAB-oXGYMtvP0MvdNrzvodkIg3rMZ9-yxFgzSLpgKRt0KDEySg5CLUBddDW-V53ASRcKbJE"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-tertiary-container rounded-full border-2 border-white"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Selim B.</p>
+<p class="text-[10px] text-tertiary font-bold tracking-wider">ÖDENDİ</p>
+</div>
+<!-- Member 4: Pending -->
+<div class="bg-white border border-outline-variant rounded-[24px] p-4 flex flex-col items-center space-y-2 hover:scale-[1.02] transition-transform">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Studio portrait of a young woman with an approachable and friendly look. The background is a soft beige tone, part of a warm, light-mode palette. The image conveys a sense of reliability and belonging within a modern social saving ecosystem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB45nDhhjuIj-6vITmnR5z6tlk9mrCHEdfpoFLatMI9NJyL8TPG0vTp_qChgaa29iJwv1qRq_ZEdDpWgWen1I8KT7wa3n-SGcbdy0Q1vtpTAyOuJ_bfBEfb6BI6mc-mZ_-rY91GRl8LCher0shIuoC9hfVB-apQtbJs3lCleFeA3dAVxbSeRJ5wWWuBpwDDuzSMKx5ttDMyE5USOznJ8ZqW-e22LRGmuUYsIoVnOUL1bxtapbhevuf9SaASl8sjtpLby6L0uhNeVX1c"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary-container rounded-full border-2 border-white animate-pulse"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Elif S.</p>
+<p class="text-[10px] text-primary-container font-bold tracking-wider">BEKLİYOR</p>
+</div>
+</div>
+</section>
+<!-- Group Timeline -->
+<section class="space-y-stack-gap-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface px-1">Grup Takvimi</h3>
+<div class="bg-white border border-outline-variant rounded-[24px] p-6 soft-shadow">
+<div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-tertiary-container before:via-secondary-fixed before:to-transparent">
+<!-- Past Item -->
+<div class="relative flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-tertiary-container text-white z-10 shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="ml-4">
+<p class="font-label-md text-label-md text-on-surface">Mart Ödemesi Tamamlandı</p>
+<p class="font-body-sm text-body-sm text-secondary">Alıcı: Caner Uzun</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary">15 Mart</p>
+</div>
+<!-- Current/Upcoming Item -->
+<div class="relative flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-white z-10 shrink-0 border-4 border-white">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div class="ml-4">
+<p class="font-label-md text-label-md text-on-surface font-bold">Nisan Ödemesi</p>
+<p class="font-body-sm text-body-sm text-secondary">Alıcı: Zeynep Demir</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-primary font-bold">12 Nisan</p>
+</div>
+<!-- Future Item -->
+<div class="relative flex items-center justify-between opacity-50">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-secondary-fixed text-secondary z-10 shrink-0">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</div>
+<div class="ml-4">
+<p class="font-label-md text-label-md text-on-surface">Mayıs Ödemesi</p>
+<p class="font-body-sm text-body-sm text-secondary">Alıcı: Kerem H.</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-secondary">15 Mayıs</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="pb-8">
+<button class="w-full h-14 rounded-[20px] bg-primary-container text-white font-bold text-lg soft-shadow flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined">payments</span>
+                Katılım Payını Öde (500 ₺)
+            </button>
+<p class="text-center text-body-sm text-secondary mt-3">Gelecek ödeme tarihinize 4 gün kaldı.</p>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface-container-lowest shadow-[0px_-2px_10px_rgba(200,155,60,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1.5 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label-sm text-label-sm-mobile">Groups</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container opacity-70 hover:bg-secondary-container/20 transition-all" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-label-sm text-label-sm-mobile">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container opacity-70 hover:bg-secondary-container/20 transition-all" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-label-sm text-label-sm-mobile">Contribute</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container opacity-70 hover:bg-secondary-container/20 transition-all" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm-mobile">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container opacity-70 hover:bg-secondary-container/20 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm-mobile">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for the progress bar
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressBar = document.querySelector('.h-full.bg-primary-container');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                setTimeout(() => {
+                    progressBar.style.transition = 'width 1s ease-out';
+                    progressBar.style.width = '70%';
+                }, 300);
+            }
+        });
+    </script>
+</body></html>

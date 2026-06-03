@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#410000",
+                    "surface-tint": "#805600",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#ffdbce",
+                    "secondary-fixed": "#ffdad4",
+                    "primary-fixed-dim": "#ffba44",
+                    "on-tertiary-container": "#5c4100",
+                    "outline": "#847561",
+                    "primary": "#805600",
+                    "on-tertiary-fixed-variant": "#5d4200",
+                    "primary-fixed": "#ffddaf",
+                    "on-primary": "#ffffff",
+                    "on-background": "#2a170f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#281800",
+                    "on-secondary-fixed-variant": "#80281e",
+                    "secondary-fixed-dim": "#ffb4a8",
+                    "surface-container-high": "#ffe2d8",
+                    "outline-variant": "#d6c4ac",
+                    "error-container": "#ffdad6",
+                    "secondary": "#a03f33",
+                    "surface-container-highest": "#ffdbce",
+                    "on-primary-fixed-variant": "#614000",
+                    "inverse-on-surface": "#ffede7",
+                    "background": "#fff8f6",
+                    "on-primary-container": "#5f3f00",
+                    "surface-dim": "#f8d2c4",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#7b5804",
+                    "primary-container": "#f0a500",
+                    "surface-container-low": "#fff1ec",
+                    "surface-bright": "#fff8f6",
+                    "inverse-surface": "#422b22",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#2a170f",
+                    "surface-container": "#ffe9e2",
+                    "tertiary-container": "#daad58",
+                    "on-tertiary-fixed": "#271900",
+                    "surface": "#fff8f6",
+                    "inverse-primary": "#ffba44",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#731f16",
+                    "secondary-container": "#fd8675",
+                    "tertiary-fixed": "#ffdea6",
+                    "tertiary-fixed-dim": "#eec068"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "gutter": "16px",
+                    "unit": "4px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Nunito Sans"],
+                    "headline-md": ["Nunito Sans"],
+                    "headline-lg": ["Nunito Sans"],
+                    "headline-lg-mobile": ["Nunito Sans"],
+                    "display-lg": ["Nunito Sans"],
+                    "body-lg": ["Nunito Sans"],
+                    "body-md": ["Nunito Sans"],
+                    "label-md": ["Nunito Sans"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .moon-phase-gradient {
+            background: conic-gradient(from 180deg at 50% 50%, #F0A500 0deg, #F0A500 240deg, #ffe9e2 240deg, #ffe9e2 360deg);
+        }
+        .gathering-circle {
+            perspective: 1000px;
+        }
+        .table-surface {
+            transform: rotateX(45deg);
+            box-shadow: 0 20px 50px -10px rgba(128, 86, 0, 0.2);
+        }
+        .coin-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full bg-surface-container-low dark:bg-surface-container-low border-b border-outline-variant/50 z-50 flex justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img alt="User profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvK00xHUYo1O3HDBzWR0UPs_ZUa2S56Kl2xRghCkXYpRYGFIby4sIpNs5ijzuz8DizfavC0Ugw_TFwU8tQS_QycFHQVb6VDU6LHvuQhOst5a8nA2ICUELN7xB-0z3r_WQjgD-FNYsAhHmb_ncKfJVDueF_X8x7AMSsW5TviXhNXJJG9f-jkgVko87WoR-vJgxTsMhpJDgrbmKbpSr6yJMcAsZqVq74tqIEIPJ4ZcAVCNlUiE3duHUy8_2Si"/>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary">Altın Günü</h1>
+</div>
+<div class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label-lg text-label-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">payments</span>
+            12.50 GR
+        </div>
+</header>
+<main class="pt-20 px-margin-mobile max-w-2xl mx-auto space-y-stack-lg">
+<!-- Social Gathering Hero Section -->
+<section class="relative pt-8 pb-4">
+<div class="text-center mb-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Mimoza Grubu</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Sıradaki Çekilişe: 4 Gün Kaldı</p>
+</div>
+<!-- The Round Table Visual -->
+<div class="relative w-full aspect-square max-w-[320px] mx-auto gathering-circle flex items-center justify-center">
+<!-- Wooden Table Surface -->
+<div class="absolute w-full h-full rounded-full bg-[#E5C49F] table-surface border-[6px] border-[#D4A853]"></div>
+<!-- Center Gold Pile -->
+<div class="relative z-10 flex flex-col items-center coin-float">
+<div class="relative h-20 w-24">
+<img class="absolute bottom-0 left-2 w-12 h-12" data-alt="A detailed digital illustration of a pile of sparkling gold Turkish coins with intricate minting patterns, resting on a warm wooden surface. The lighting is soft and golden, creating a celebratory and wealthy fintech atmosphere in a light-mode aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLuaJIJ-J3_gKBneh5MPsVwy9tlhDVLj_ukf7Nwjkyj3BG4u3Y_kMg6m4hWIVUCt18PFXqVxYnR3VW4HnGKttVbQAK7u3CMN52t-lZYSJBJfAzZckRcMwjJ1Pnjmuqr4pWVJBRy7t5ryeUZY2ML_rZSxicsJiv0-lOX2gMnvh9C4BtgEVbCBxD7J8VK5_eeUSpLCUQ57nTFuXny2jRAKGctKk3ycJhEyUSnI_0G1DVaijayNewxp405aDlwr"/>
+<img class="absolute bottom-2 right-2 w-10 h-10" data-alt="A small stack of shiny gold coins shimmering under a warm ambient light, placed on a light cream textile background. The style is tactile minimalism with a focus on luxury and financial growth, using a gold and tan color palette." src="https://lh3.googleusercontent.com/aida/AP1WRLvZ-kVTQpJO_mQviyJSFN0QZFAgf2_rAfa2iU2N3LsoxXFkwjR207uJAF6hOK1_1vc9Q2U_j1eL4FArhNy84siqHis6UVwsJZKy7LeQpdQTrRjK7eQ1xMPs7s_5dyKWfdXYpx0INXitD9mJ1RjaLfQfkLOJWKXkPv061ZgTXH4SZv2lx7m0xsOu_A1yRjp6_LCcmO3-lxB-hrWmA28F4sgeDoDBX2pVV0mNQO1Ia4quHjcyV9UdnSL_BUVt"/>
+<img class="absolute top-0 left-6 w-14 h-14" data-alt="Close-up of golden coins scattered artfully, representing digital savings. The visual style is modern storybook illustration with soft shadows and rich, warm golden tones against a minimalist cream backdrop." src="https://lh3.googleusercontent.com/aida/AP1WRLuMQgWZ68piQ1ccoqECL-bmcR2s8ZAgi10iK7HFTjQTfHBsBzfBElzVy955M9T66gYFodRVRhIR_Zfshn5CqWfU69uyrRhxnMhHufKqwnjzIl_nim_50vradWgYg8J247A4_o57aiF06t4S0_0B8lk43Nef458rwEs4xDV2NZLd9dSmJCAC38gS6WjtYwXHmf0kP3i6trZ3S-__8Wq8GsO4N6fjVTEaJEG1Kd9gHg8_BHh9sjKFYkNKHUmA"/>
+</div>
+<div class="mt-2 bg-primary/10 backdrop-blur-md border border-primary/20 px-4 py-1 rounded-full">
+<span class="font-display-lg text-headline-md text-primary">45.0 GR</span>
+</div>
+</div>
+<!-- Member Avatars Around the Table -->
+<div class="absolute inset-0 flex items-center justify-center">
+<!-- Positioned radially -->
+<div class="absolute -top-4 w-14 h-14 rounded-full border-4 border-primary ring-4 ring-background overflow-hidden" title="Ayşe - Current Winner">
+<img alt="Member Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuinhDOPUP4ZCfiS3xABbmtMIqCMamuE2LT0d30c9d1q4zqoMOhjEHC5CJgUMeShLpm4dtRlbhhZA0_XKDBL65Uzo3M0UeF_NtgFH3Lq6LP3A4FsD8IKc66ZQtXl5TSxNW2cB6FGnIcC-BdJU5Z-o-QG1OQIaHpjzc7RTgKX31mDqqZKPb8Pg5df14LZiJ5fzZTWUzVHTxMdznQXb9SLtc63Vp-jXD27beAx41sdBoB1ZjDYW88nweStuuj"/>
+</div>
+<div class="absolute top-1/4 -right-4 w-12 h-12 rounded-full border-2 border-outline ring-2 ring-background overflow-hidden">
+<img alt="Member Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLv46dGvl4W_Xd3Z6MzWBU0E6l2VanFCyBJu3tlrxf6dvIxKUf3skX6MC3wI-rEzu0rRgK9X9QzO-h7_pwFDbYvlx18Ii5o3yF5fWdLGYDJFJEe1B4g600p3tm85MZ-AaJn0sm7VeZ4AufH7rClxptLfI3c1wB_4cgf9pSjZYes5uqZ8HIGs7uVUInDcmiRk858440PHHgSkbEmLrLi7igNhBp_ERKhnb1ztxQDomcnfZMHG1IEfFlOPcoFS"/>
+</div>
+<div class="absolute bottom-1/4 -right-4 w-12 h-12 rounded-full border-2 border-outline ring-2 ring-background overflow-hidden opacity-60">
+<img alt="Member Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLubrBxOTJ5-JwHSPAozazZiBjQBL5NLFFVAsAb3sShMy-WARFSaYRIH35NL0aLyqR_7Z0kwRYYnHfynTXXf1BIWudP3vZs0rdQ0Ljo-Rw0-p2ggXZfk3cBJmTY2KVll-FI5Qd_b0aecDpEzL7wtiSdXtqbeY6z8sUYSPmQluRSPHYTmiyd0ry3szAy9azzDJZ3hWqRk3oFpZzKEM4pdGbwnLUN60XuhMkyp0jW9f7rAViq6SSdDFBxqA2ug"/>
+</div>
+<div class="absolute -bottom-4 w-12 h-12 rounded-full border-2 border-outline ring-2 ring-background overflow-hidden">
+<img alt="Member Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLts51vpD8TkfQn9Y1dqCptoCV7afsL4p9sJNj5lV2CDTOIYsN6Gt6ZvhaiK4J238JlHhGTHfy3C_sQP35LueaaMIk7U5m5ALfqxUHGk94o_gkiJGa4BEcqNSbf5FJYoEW1xa0PIVG62YJHFn83TrE7kZKtHfaIKb2uQiXtJVk0AnkQUyEkrLnCoy2_ULgHP0M_oJ-q6Ck_hFOATt77qOUeCBmzMN0B7_i4T418ZWhyKmJx7Zcf4C75nu8tQ"/>
+</div>
+<div class="absolute bottom-1/4 -left-4 w-12 h-12 rounded-full border-2 border-outline ring-2 ring-background overflow-hidden">
+<img alt="Member Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLudi9OL6XoyIS76pYDq4WfcWzS9iXMC7pUm2bVpdKixd0FOoFfHo6sxznHauBQLU8lb-U3gXWx7pz9xVFNY3GeqJL6UrjdrBDFN35O8NXGS1YWsSlac2uh04dmTBcjkmSqrbPqd5AeEM5N2QxfUMKp4oyCWn13n-4jCgYOYY1Ejs6zIEh9MQJLxhtbpc_HKLlEI6KZ3tGbldIi0uPMWtE3tId0rOPNsC9FwlYt7e8bXsPj_v_pGUFFCfq2j"/>
+</div>
+<div class="absolute top-1/4 -left-4 w-12 h-12 rounded-full border-2 border-outline ring-2 ring-background overflow-hidden">
+<img alt="Member Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLu_TnzfOg5lrTKY0wtEZXUynZUWvh8TNGSEjlaNn5teHSFkQw8LelWJ8kwgp8fx_PbCTMfy9aR07S5BAJD1-3_leI5Eysk2bBOODGIS1UCjXNRg1wC99UmJ5IXceaR-rpm65RKeL12Cwofy7WOs7ob8kcd3Kam6x4_WFHLXMntH9Vk5y9K9uf_lX_Tzc-FcpkyKk16Gs4_MKdcY3aTE6NtVi9TwQjUmPUouDbD6o0W7vtaEvzZZ8xdt3GMz"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Moon Phase Progress -->
+<section class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/30 flex flex-col items-center gap-4">
+<div class="flex items-center justify-between w-full">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant">Çekiliş Periyodu</h3>
+<span class="text-primary font-bold">75% Tamamlandı</span>
+</div>
+<div class="relative w-full h-4 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container w-3/4 rounded-r-full shadow-inner"></div>
+</div>
+<div class="flex justify-around w-full gap-2">
+<div class="flex flex-col items-center opacity-40">
+<span class="material-symbols-outlined text-on-surface-variant">brightness_3</span>
+<span class="text-[10px] font-bold">Başlangıç</span>
+</div>
+<div class="flex flex-col items-center opacity-100">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">brightness_6</span>
+<span class="text-[10px] font-bold text-primary">Güncel</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<span class="material-symbols-outlined text-on-surface-variant">brightness_high</span>
+<span class="text-[10px] font-bold">Ödeme Günü</span>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="grid grid-cols-2 gap-gutter">
+<button class="bg-primary text-on-primary py-4 px-6 rounded-full flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add_card</span>
+<span class="font-label-lg text-label-lg">Ödeme Yap</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface-variant py-4 px-6 rounded-full flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform border border-outline-variant/50">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-lg text-label-lg">Kuralları Gör</span>
+</button>
+</section>
+<!-- Members List -->
+<section class="space-y-4 pb-12">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Grup Üyeleri (8)</h3>
+<button class="text-primary font-label-lg text-label-lg">Tümünü Gör</button>
+</div>
+<div class="space-y-2">
+<!-- Member Row: Paid -->
+<div class="flex items-center justify-between p-4 bg-white rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="You" class="w-10 h-10 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLvwOn4czE4h1T9bETPK9GlsL9laRx0O0Ory_Kv4hc5frNpZz4DED2eDSfFHj4CQen8iVyo1KXU_cgxsiDHJW4QWApkrBteSdkgl_f1x2XQbDvddiN4Byc-_YZ8opb_6HrLDzzPHZWXEwm8XiOUi8KH4TNsqwskCcAYUU29uQZOp7cwVSwGwhxe9VRDz_hZRyaNwJWYFtILH7QH84JQlUM0IwqN2haVYa5yp81S21jGQ11Gg2JbdUoV2Yuk"/>
+<div class="absolute -bottom-1 -right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px] font-bold">check</span>
+</div>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Siz</p>
+<p class="text-[12px] text-on-surface-variant">Ödeme Yapıldı</p>
+</div>
+</div>
+<p class="font-bold text-primary">5.0 GR</p>
+</div>
+<!-- Member Row: Paid -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low/50 rounded-xl border border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Ayşe" class="w-10 h-10 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLtmyf64JLSMbTcsY-eVFOacs8bFx--AKuF6AQKG2oBsvYtsNqAqg5KFh4-4ZXJYKY4hp4IBuzHsQNJsuaXrJ5c_CIlHsecCW1opq-bmPd7dXV28_KWkzQbJIM-MZBKVNm_4kJmc5jlRbLSP5LyywDVgWJgo9m8djyRcYXqlGQ1dXV2uORLSE04y_J1DY7Q51fvT2xY5pbWUUokNakwIRobreWT9-i1Uzf2f6d9UtSEOketqK4ULxvpUBEOc"/>
+<div class="absolute -bottom-1 -right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px] font-bold">check</span>
+</div>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Ayşe Yılmaz</p>
+<p class="text-[12px] text-on-surface-variant">Ödeme Yapıldı</p>
+</div>
+</div>
+<p class="font-bold text-primary">5.0 GR</p>
+</div>
+<!-- Member Row: Waiting -->
+<div class="flex items-center justify-between p-4 bg-white rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Mehmet" class="w-10 h-10 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLuMqxTwjlfUIAXkrih5_XFvnkKuJqrzY1SHw1Rlj46-_KYuOBANK1EA1Cw47enTFkMjF4httWMHgIzeygNdsccnbdsfqzO3nmGwXw3fqj_s7hD-cRMfKj11IipWrfVgY9Sped_hdN9KyXQ5megqBA5AT6UQJw419qXAtGUwZ1l0Gq79s80WuWtpHe-EWoUp0QasKI6vI3r3nswcdLPe3LdFVM-g0hWVetJd4hgWbUdyBPGZeCAY4GTZhSLn"/>
+<div class="absolute -bottom-1 -right-1 bg-secondary w-4 h-4 rounded-full border-2 border-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px] font-bold">schedule</span>
+</div>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Mehmet Demir</p>
+<p class="text-[12px] text-on-secondary-fixed-variant">Bekleniyor</p>
+</div>
+</div>
+<p class="font-bold text-on-surface-variant/40">5.0 GR</p>
+</div>
+<!-- Member Row: Waiting -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low/50 rounded-xl border border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Zeynep" class="w-10 h-10 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida/AP1WRLuIA2kd2qj8UJaS_PJhBeoI4RJYdBT-iKjYlOAv0mpK6hk20WFNND--jqTRfxZ4wl2tjCPN1wPE13iGPIzgi18f_MT9v8IglBPrMvZCdxan3IoBUEwzqBDkFbgswzdk1TXyEIBeRsgwwLb1_zqqXGD1y63Qz5AbmjSknOTJ39DY7SH9EviKGrlUqKCmoZeRx0-6AHn_Htwo3-vjQiT2pu9PEM8lnYb8ZArZMLEFXJE7n5SzbupzIzQ65ayM"/>
+<div class="absolute -bottom-1 -right-1 bg-secondary w-4 h-4 rounded-full border-2 border-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px] font-bold">schedule</span>
+</div>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Zeynep Kaya</p>
+<p class="text-[12px] text-on-secondary-fixed-variant">Bekleniyor</p>
+</div>
+</div>
+<p class="font-bold text-on-surface-variant/40">5.0 GR</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container-lowest border-t border-outline-variant/30 shadow-sm rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-110 duration-300 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">casino</span>
+<span class="font-label-md text-label-md font-bold">Draw</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-label-md text-label-md">Create</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-md text-label-md">History</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</div>
+</nav>
+<script>
+        // Micro-interaction: Subtle rotation effect on the table when scrolling
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const table = document.querySelector('.table-surface');
+            if (table) {
+                const rotation = 45 + (scrolled * 0.05);
+                table.style.transform = `rotateX(${rotation}deg)`;
+            }
+        });
+
+        // Micro-interaction: Member avatar hover scales
+        document.querySelectorAll('.gathering-circle div').forEach(avatar => {
+            avatar.addEventListener('touchstart', () => {
+                avatar.style.transform = 'scale(1.2) translateY(-10px)';
+                avatar.style.zIndex = '50';
+            });
+            avatar.addEventListener('touchend', () => {
+                avatar.style.transform = 'scale(1) translateY(0)';
+                avatar.style.zIndex = 'auto';
+            });
+        });
+    </script>
+</body></html>

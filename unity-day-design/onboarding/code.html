@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;family=Poppins:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-background": "#1b1c19", "on-secondary-container": "#526478", "secondary-container": "#cfe2f9", background: "#fbf9f4", "surface-bright": "#fbf9f4", "surface-tint": "#944a00", "secondary-fixed": "#d1e4fb", "inverse-primary": "#ffb783", "primary-fixed": "#ffdcc5", "surface-container-lowest": "#ffffff", primary: "#944a00", "on-tertiary": "#ffffff", tertiary: "#006d37", "tertiary-fixed-dim": "#61de8a", "surface-container": "#f0eee9", "on-tertiary-fixed": "#00210c", "on-secondary-fixed": "#091d2e", "on-primary": "#ffffff", "primary-fixed-dim": "#ffb783", error: "#ba1a1a", "secondary-fixed-dim": "#b5c8df", "on-secondary": "#ffffff", "error-container": "#ffdad6", "surface-dim": "#dbdad5", "on-secondary-fixed-variant": "#36485b", "primary-container": "#e67e22", "on-tertiary-container": "#003a1a", "on-tertiary-fixed-variant": "#005228", outline: "#897365", "on-error": "#ffffff", "on-surface": "#1b1c19", "surface-container-highest": "#e4e2dd", "inverse-on-surface": "#f2f1ec", "surface-container-low": "#f5f3ee", "outline-variant": "#dcc1b1", "on-primary-fixed": "#301400", "on-surface-variant": "#564337", secondary: "#4e6073", "on-primary-container": "#502600", "on-primary-fixed-variant": "#713700", "tertiary-container": "#29af61", "surface-container-high": "#eae8e3", surface: "#fbf9f4", "tertiary-fixed": "#7efba4", "surface-variant": "#e4e2dd", "inverse-surface": "#30312e", "on-error-container": "#93000a"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {lg: "40px", gutter: "24px", base: "4px", "margin-desktop": "48px", xl: "64px", md: "24px", xs: "8px", "margin-mobile": "16px", sm: "16px"}, fontFamily: {"label-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Poppins"], label: ["Plus Jakarta Sans"]}, fontSize: {"label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}], "headline-xl": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", letterSpacing: "0.03em", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "700"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}]}}}};</script>
+<style>
+        body {
+            background-color: #fbf9f4;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background">
+<!-- Top Navigation Anchor (Suppressed based on Transactional Flow logic, using TopAppBar as Branding Header) -->
+<header class="w-full top-0 sticky bg-background z-50 flex justify-between items-center px-margin-mobile py-sm md:px-margin-desktop">
+<div class="font-headline-md text-headline-md font-extrabold text-primary">
+            Dijital Altın Günü
+        </div>
+<button class="text-on-surface-variant font-label-md hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+            Skip
+        </button>
+</header>
+<main class="min-h-[calc(100vh-80px)] flex flex-col px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto pb-lg">
+<!-- Illustration Section (Bento-style visualization of Groups) -->
+<section class="mt-md mb-xl flex-grow flex flex-col items-center justify-center">
+<div class="relative w-full max-w-2xl aspect-[4/3] md:aspect-[16/9] flex items-center justify-center">
+<!-- Background Decorative Elements -->
+<div class="absolute inset-0 bg-primary-container/5 rounded-xl -rotate-2"></div>
+<div class="absolute inset-0 bg-secondary-container/10 rounded-xl rotate-1"></div>
+<!-- Animated Cards Layout (Visualizing Groups) -->
+<div class="relative z-10 w-full grid grid-cols-2 md:grid-cols-3 gap-sm p-sm">
+<!-- Family Group Card -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/10 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-primary" data-icon="family_history">family_history</span>
+<span class="font-label-md text-on-surface">Aile Grubu</span>
+</div>
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest" data-alt="A warm, high-quality 3D avatar of a middle-aged man with short hair and a friendly smile, styled in a modern corporate human-centric aesthetic. The lighting is soft and natural, emphasizing a professional yet approachable personality. The color palette features warm beige and vibrant orange accents to match the overall brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtf1Vnz2iC5viwPk89kLPLVq5FTLDe_c3VBaMvSpqoubVywT8_0v0ddKj-3I6z-j4H1k43CgZFdtSBpmRUIpIGcscaPvWR0hJwfnYA1fpx8rdGOdaytxirsIqd533-5iX1hVqXWKZ6brC34vWyPTSn3PUjVopNvTYUoeOxmIDyqWdtqD1RQVhADAZ4BjiY8ByrtsFjpGszcUgNTbSvYh3ww98txxJ3l2uQDenSjGTAd9a7nOYGMaOrhK97cjhbslrVJRRm1_5VnXsY"/>
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest" data-alt="A high-detail digital illustration of a woman's avatar with glasses and a cheerful expression, set against a bright minimalist background. The style is clean and contemporary, utilizing soft shadows and high-contrast color accents in primary orange. The overall mood is optimistic and trustworthy, reflecting a modern lifestyle brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1hal9uwv4zAKzMxu4c4QTAd4Rxht_Fbjy56J6SyiI7YbrqPr8VrDsmioKG1XgyoL9qAMzaHam6K5t-4pi60RzAJlxfmSA7wQlWfWan2WIK48MFfc2f_NtGmxiDCtToZU9E74RXFuILuIAuy0jTeBmEyuau4QvR15uG6s-RjHXPZBqcKhapcpmiZQPCakKz2GHVoVcC-Yy4WT1-yAbcfF0xUuKcOOBJ9bOK0IWN-j-N6bkG7h5i7MVgl3O1K6Wa5QHTY9yv8-4prT7"/>
+<div class="flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-surface-container-lowest bg-surface-variant text-[10px] font-bold">+3</div>
+</div>
+</div>
+<!-- Work Group Card -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/10 transform rotate-2 hover:rotate-0 transition-transform duration-500 mt-lg md:mt-0">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-tertiary" data-icon="work">work</span>
+<span class="font-label-md text-on-surface">İş Ekibi</span>
+</div>
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest" data-alt="A striking digital portrait of a young professional with a confident look, rendered in a high-contrast bold visual style. The lighting is bright and even, perfect for a modern light-mode UI. The artwork maintains a sophisticated palette of clean whites and vibrant accent colors that evoke a sense of kinetic energy and efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqMnGcJ3efN6vcsLoLKwPr8g-JjdjXgNIo-QADYt0XTV25wXyGiFbVldUyADlGOWqo6npI0WzrolbuOTS8rFLLrn-xOpMB68_t3L2864P38mtEnh2dmrhieozmSH_qfvmb0vvFn3F6RLq11G7TFJCl_5zfa-TULoSgn130WUXskLSC7yNEAIke6PtOuXpNgRJGzn7RX91WtZWuZgg3-cg3HgjF_icnfXgxeGBThBjJ_xK7YyMK04HGibNkchiL3KRmxYHOLueHuioM"/>
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest" data-alt="A premium 3D character avatar of a woman with long hair, designed with soft geometry and high-end professional aesthetics. The character is illuminated by gentle studio lighting, creating an airy and fresh feel. The color theme is strictly aligned with the warm foundation and vibrant orange accents of the master design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkfjp_Dkw4y1ylkAdw5viXI3KSzTQ3PVAjzqSZBa10v50yUwE4T6C7NKlBBcihV1v2_x0Ga4Yv731PrPPhqe0BWOOFvyC2ZHmDhdgUcumFfd_d1VVy8kBK8Pjy_ZUNcUymb5e6B-5l8SZfwXG3g58Dyrc-5RzHkjXkK3EJLz80t7E1srypNU_tdWzhcHs-EU3i18lWQw8Ru4gHgQtVxDqtzi_aBXazn50uRSycQX_KVdM6fNEOiKNJGViu-KdYbzDZHcyXxbC4Iq6k"/>
+</div>
+</div>
+<!-- Friends Group Card -->
+<div class="hidden md:block bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/10 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="celebration">celebration</span>
+<span class="font-label-md text-on-surface">Dostlar</span>
+</div>
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest" data-alt="A modern, human-centric avatar of a man with a beard and a stylish cap, rendered with clean lines and vibrant colors. The lighting is bright and cheerful, suggesting a contemporary lifestyle and community-focused brand. The image is designed to fit seamlessly into a high-contrast bold digital environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWnHai4nBDXRPD73hRHDGzebwo3KqEzpNO6w3oPea44_sQXD-3s4PMwP0CHbbyyyj89bVuwdoXTBIunHj21WAYdw3R2zWCngEevlI2iV7X2yR5sv7Cxq33r8tC5QqLMXK5vNWoipYjNOcs4m98senjOqNOxONptwtWP-2XRTfB9BWF_qYhHAJxU3di4SmcMrS_j_mkRihQuQOhMuIlcV5y1J5izLt877u7T0KGTE_i2fuNYdEFx7vt7yGsJC0GowDc2xag0Zx0Rn1X"/>
+<img class="inline-block h-8 w-8 rounded-full ring-2 ring-surface-container-lowest" data-alt="A detailed digital illustration of an energetic young woman's avatar, featuring vibrant orange highlights in her attire to mirror the brand's primary color. The background is a calm, warm neutral, emphasizing professional reliability and modern corporate efficiency. The style is distinctly contemporary and approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaqbhQ5ZHA6MoehBGgfJtZic3fxs2I_N7GkP9FUZdTi3lS3sRkJCeaEYWZdWHnXexNimTO5X0NcCTHPK7kswHVuw0JA4XI4oS1p4hcmmSZblLMefP7_lzl9F59usPlY1fl9nGjf0mpgTwLEFqe65x0yMAd3oj1fCR63rQbtGoGtsOUg4YW9-6ym8NeMA-u4F_0-4NMGoHP0FmxfaGVFwmk3qYOdA2Ypagll3WbnVEq2XsXeYjeCmTTMg2N9vZkCPFC9rcr4K0bJ0LN"/>
+</div>
+</div>
+</div>
+<!-- Abstract Connectivity Lines (Atmospheric micro-interaction) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<path class="text-primary" d="M100,100 Q250,50 400,150" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path class="text-secondary" d="M150,250 Q300,300 450,200" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+</section>
+<!-- Text Content Section -->
+<section class="text-center md:text-left max-w-2xl mx-auto md:mx-0">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-sm">
+                Gruplarınızı Kurun
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl leading-relaxed">
+                Aileniz, iş arkadaşlarınız veya dostlarınızla özel tasarruf grupları oluşturun veya mevcut bir gruba katılın.
+            </p>
+</section>
+<!-- Footer / Action Area -->
+<footer class="mt-auto pt-lg flex flex-col md:flex-row items-center justify-between gap-md">
+<!-- Progress Indicators -->
+<div class="flex items-center gap-xs order-2 md:order-1">
+<div class="h-2 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-2 w-8 rounded-full bg-primary-container"></div>
+<div class="h-2 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-2 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-2 w-2 rounded-full bg-outline-variant"></div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-sm w-full md:w-auto order-1 md:order-2">
+<button class="hidden md:flex items-center justify-center px-lg py-sm rounded-full font-label-md text-primary border-2 border-primary hover:bg-primary-container/5 transition-colors active:scale-95 duration-200">
+                    Geri
+                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center px-xl py-sm rounded-full bg-primary-container text-white font-label-md shadow-md hover:opacity-90 active:scale-95 transition-all duration-200">
+                    Next
+                </button>
+</div>
+</footer>
+</main>
+<!-- Bottom Navigation Suppressed for Onboarding Flow as per Hierarchy Rules -->
+<script>
+        // Micro-interactions for hovering cards
+        document.querySelectorAll('.bg-surface-container-lowest').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px) scale(1.02)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+</body></html>

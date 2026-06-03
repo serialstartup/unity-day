@@ -1,0 +1,52 @@
+<h2>Foundation Yaklaşımı</h2>
+<p class="subtitle">Uygulamanın temelini nasıl kuralım? Her yaklaşım farklı bir başlangıç noktası öneriyor.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Tooling → Schema → Navigasyon → İlk Ekranlar (Önerilen)</h3>
+      <p>Sıralı ve temelli yaklaşım. Her katman bir sonrakinin üzerine inşa edilir.</p>
+      <div class="section">
+        <span class="label">Adımlar</span>
+        <ol>
+          <li><strong>Tooling:</strong> NativeWind kurulumu, tema token'ları (renkler, spacing, fontlar), Plus Jakarta Sans font</li>
+          <li><strong>Schema Types:</strong> <code>src/types/</code> altında Group, User, Member, Contribution TypeScript tipleri — mock data ile birlikte</li>
+          <li><strong>Navigasyon:</strong> Auth Stack (Login → Signup → Onboarding) + Ana Tabs (Home | Activity | Contribute | Profile)</li>
+          <li><strong>İlk Ekranlar:</strong> Login + Homepage skeleton</li>
+          <li><strong>CLAUDE.md + Obsidian:</strong> Proje kuralları ve progress tracking workflow</li>
+        </ol>
+      </div>
+      <div class="pros-cons">
+        <div class="pros"><h4>Artıları</h4><ul><li>Her şey doğru yapı üzerinde kurulur</li><li>Schema tiplerini erkenden bilmek component'ları doğru şekillendiriyor</li><li>Temiz, ilerletilebilir</li></ul></div>
+        <div class="cons"><h4>Eksileri</h4><ul><li>İlk görünen ekran biraz bekler</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Component Kütüphanesi Önce</h3>
+      <p>Önce tüm temel UI bileşenleri (Button, Input, Card, Avatar, Badge...) tasarım dosyalarından piksel-perfect çıkarılır, sonra ekranlara yerleştirilir.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Artıları</h4><ul><li>Tutarlı UI garantisi</li><li>Ekranlar hızlı monte edilir</li></ul></div>
+        <div class="cons"><h4>Eksileri</h4><ul><li>Uzun başlangıç süresi, sonuç geç görünür</li><li>Ekranlar görülmeden hangi component'ların gerektiği tam belli olmaz</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Ekran Ekran İlerle</h3>
+      <p>Tooling kur, sonra doğrudan Login ekranından başla. Her ekranda ihtiyaç duyulan component'ları inline yaz, sonra refactor et.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Artıları</h4><ul><li>Hızlı görsel sonuç</li><li>Motivasyon yüksek tutar</li></ul></div>
+        <div class="cons"><h4>Eksileri</h4><ul><li>Tekrar kod riski yüksek</li><li>Schema tipleri sonradan uyum sorunu yaratabilir</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:24px">💡 <strong>A öneririm</strong> — Schema tiplerini erken çıkarmak istediğini söyledin, bu yaklaşım tam buna uyuyor. Navigasyon yapısı da görünür olduğunda component tasarımları daha bilinçli yapılır.</p>

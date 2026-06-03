@@ -1,0 +1,42 @@
+<h2>Styling Yaklaşımı</h2>
+<p class="subtitle">Uygulamanın temel stil sistemi nasıl kurulsun? Tasarım dosyalarındaki renk paleti ve tipografi bunun üzerine inşa edilecek.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>NativeWind v4 (Tailwind CSS)</h3>
+      <p>React Native'de Tailwind class'larını kullan. HTML mockup'larındaki CSS değişkenlerini Tailwind token'larına çevirmek kolay. <code>className="bg-primary text-white rounded-2xl"</code> gibi kullanım.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Artıları</h4><ul><li>Web mockup'larına en yakın syntax</li><li>Hızlı prototipleme</li><li>Dark mode desteği kolay</li></ul></div>
+        <div class="cons"><h4>Eksileri</h4><ul><li>Ekstra bağımlılık</li><li>Expo v56 ile config gerektirir</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>React Native StyleSheet</h3>
+      <p>Standart RN yaklaşımı. Merkezi bir <code>theme.ts</code> dosyasında renkler ve spacing token'ları tanımlanır, component'lar StyleSheet.create ile kullanır.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Artıları</h4><ul><li>Sıfır ekstra bağımlılık</li><li>En stabil yaklaşım</li><li>RN'in doğal dili</li></ul></div>
+        <div class="cons"><h4>Eksileri</h4><ul><li>Daha fazla boilerplate</li><li>Web mockup'larından çeviri zahmetli</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Tamagui</h3>
+      <p>TypeScript-first UI kit. Kendi design token sistemi var, animasyon desteği güçlü. Önceden hazır component'lar (Button, Input, Card) ile hızlı başlangıç.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Artıları</h4><ul><li>Hazır component kütüphanesi</li><li>Güçlü animasyon ve theme sistemi</li><li>Cross-platform uyumluluk</li></ul></div>
+        <div class="cons"><h4>Eksileri</h4><ul><li>Öğrenme eğrisi yüksek</li><li>Büyük bundle size</li><li>Custom tasarıma uyarlamak zaman alır</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:24px">💡 Öneri: <strong>NativeWind v4</strong> — HTML mockup'larındaki Tailwind-benzeri yapı doğrudan uygulamaya taşınabilir, design sistemi tutarlı kalır.</p>

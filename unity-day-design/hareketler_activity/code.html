@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#e1dfdb",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "primary-fixed-dim": "#f0bf5c",
+                    "tertiary-container": "#53b656",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-secondary-container": "#63635f",
+                    "surface-container-highest": "#e4e2e1",
+                    "surface-container": "#f0eded",
+                    "on-secondary-fixed": "#1b1c19",
+                    "inverse-surface": "#303030",
+                    "on-primary-fixed-variant": "#5d4200",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#4b3500",
+                    "surface-bright": "#fcf9f8",
+                    "secondary": "#5e5e5b",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#f0bf5c",
+                    "tertiary": "#006e1c",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-fixed": "#e4e2dd",
+                    "surface-dim": "#dcd9d9",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0f0",
+                    "surface-tint": "#7b5900",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#c89b3c",
+                    "on-primary-fixed": "#261900",
+                    "tertiary-fixed": "#94f990",
+                    "surface-variant": "#e4e2e1",
+                    "outline": "#807665",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-container": "#00420d",
+                    "on-tertiary-fixed": "#002204",
+                    "on-surface-variant": "#4e4637",
+                    "outline-variant": "#d2c5b1",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffdea4",
+                    "background": "#fcf9f8",
+                    "primary": "#7b5900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-margin": "48px",
+                    "stack-gap-md": "24px",
+                    "stack-gap-sm": "12px",
+                    "container-padding-mobile": "20px",
+                    "base": "8px",
+                    "container-padding-desktop": "40px",
+                    "stack-gap-lg": "40px"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FAF8F3;
+            color: #1b1c1c;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .soft-shadow {
+            box-shadow: 0px 10px 30px rgba(200, 155, 60, 0.08);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface dark:bg-surface flex justify-between items-center px-container-padding-mobile py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A close-up portrait of a friendly young man with a warm smile, captured in natural, soft daylight. The background is a gently blurred modern living room with neutral tones, perfectly aligning with the warm and communal aesthetic of the digital savings app. High-quality professional photography with a focus on human connection and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTTgWHD-dqW0MFSUPpjSKoXj4A-Cxafg0nMuO1VKJ-P7tO4BZ8ljtJB0eUbu_2MK4HuWM5fqUNHjs6ml1L8ivv9M7U1KscRXO8H5n00GSUTqbj6Px9uygTzPHqua0yQIjKELiCpGIpRuyeCWq3wN84vQh17cIMxQylwC2HHHIXU4aQxpAfAZm9tH7Tw6GPQlsWg1qNEuCVOjjhAB4IiNfbqeqNAlRx9biPHc-NAKlm4OvHhEGMiZz8WntEsn0DPSJIzL8ZlzvZUfto"/>
+</div>
+<h1 class="font-headline-sm text-headline-sm-mobile text-primary dark:text-primary-fixed-dim tracking-tight">Dijital Altın Günü</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary">notifications</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-container-padding-mobile max-w-[1200px] mx-auto">
+<!-- Tab Switcher -->
+<div class="flex gap-4 mb-stack-gap-md overflow-x-auto hide-scrollbar">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md whitespace-nowrap">Hepsi</button>
+<button class="bg-surface-container-high text-on-surface px-6 py-2.5 rounded-full font-label-md text-label-md whitespace-nowrap">Gruplarım</button>
+<button class="bg-surface-container-high text-on-surface px-6 py-2.5 rounded-full font-label-md text-label-md whitespace-nowrap">Ödemeler</button>
+</div>
+<!-- Activity Feed -->
+<div class="flex flex-col gap-base">
+<!-- Milestone: Cycle Complete -->
+<div class="relative overflow-hidden bg-white rounded-[24px] p-6 border border-[#E7E2DA] soft-shadow mb-4 group cursor-pointer active:scale-[0.98] transition-all">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div class="flex items-start gap-4 relative z-10">
+<div class="relative">
+<div class="w-16 h-16 rounded-full border-4 border-tertiary-container p-1 bg-white">
+<img alt="Group Icon" class="w-full h-full rounded-full object-cover" data-alt="A warm and joyful photo of a diverse group of friends laughing together in a bright, sunlit outdoor cafe. The image is framed within a circular crop and emphasizes community, shared prosperity, and happiness, reflecting the core brand values of the social savings platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7TPlArZqjcJ0MaQQcjBb5Pwtl-4a6b65eLpQ2YFR-6ESqqJ3AHgAVB0gXXUaewm9oY-v1GusMhPg2NhVmiPsv4MwcC4uKGZquOQr7tg5dfiQN5Vi_WeFvq2nqjQzTEYQc2w0MM-iQS1mKdeCjdBpbJPd_AYR8qtoFdkTRy08HKiR_Kq8A_idFMDHzNTmIfVkS8xk0b7On8p1oagbO50q6A8btHrH_iTsGRUi3Rg-wClMquIBB2uq9HOZ9Ae-9zpw1FSjKeJvoYT7O"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary-container text-white rounded-full p-1 border-2 border-white">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-tertiary font-label-sm text-label-sm uppercase tracking-wider">MİLESTONE</span>
+<span class="text-secondary font-label-sm text-label-sm">2s önce</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 leading-tight">Yaz Tatili savings group completed a full cycle! 🎉</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-4">12 members successfully saved a total of ₺24.000 this year.</p>
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Member" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Close-up avatar of a smiling woman." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAHM5VTa3QXVbfZh9RlrAh2TXxxMl2yXcrpEGvRQhFisYen3xBhUIskjMwZ9banwr89Y6A4FAhTilXwM7M_q10zamxBT6iFmX1EdUueunt2f2LYxD9XRHy-xHqEbsMY4wsOYXfkmVONa_3VfMqOCofPuTWJVzFYcJtULjIRWZGGftu1eSMYFRjP2Qk_EhAK3mY4yvulL7mOg3d8eEZJZjFWpiUB9aeTPCeGzn9KjfNDarhdITWQIkiEeE9F6QYmYdtXm7eBL7MvJHr"/>
+<img alt="Member" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Close-up avatar of a professional man." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCFlAHmS__zeAX7mUWGH9OOXX6OduSHOx3PM_qEii3Asn0nBgo2Nmtl2uA_nYEU-j4GEw1kg0uORWnWlWOG8Lcqp_StCbFgRdtsJhbz93HxtlMKIRrwALPrg_hMH9wqrXDNG6rNp24h-ExKZgprvStCjGpKWUi97ciWh_ob95d24fcruuJbO2_xDyezn8TgB52EWhGjkEhL3uHEsTAe0O-lykc4XbGbV39QTqi_Z4lCjMbwov_pOf8k9JNAqtShcqvIZ0a9V_o7_t0"/>
+<img alt="Member" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Close-up avatar of a cheerful young adult." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdCNH4R4mZ-LE7d-Gf_6s_7CwjLJwnv4pAaRh-UHdnMkRjoGJefrHdXQ48JBlLkwNtUBmrghMooMys2Z1pbSd9-r2wOy9aOEB4JvBHz55wOaD8gcKRap647SQqH_QWeP-3yblOCCAwYTUwclaZdT0pcx4499_aj4ECABT1Jpa3sqgSFtr1fckv7YoH5YIuvb3JVMt1UIGjwhprzX86aXOxn1F43nW6E1xMD17dxC5uOrRZFPZDvcLjz3ju-QMJuy9uCHWuWUgyJXxa"/>
+<div class="flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-white bg-secondary-fixed text-[10px] font-bold text-on-secondary-fixed">+9</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Standard Activity: Contributed -->
+<div class="bg-white rounded-[24px] p-4 border border-[#E7E2DA] flex items-center gap-4 transition-transform active:scale-[0.98]">
+<div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+<img alt="Mert" class="w-full h-full object-cover" data-alt="A portrait of a young man with a friendly and approachable expression, styled with soft, cinematic lighting against a warm neutral background. The visual style is consistent with high-end modern fintech and wellness applications." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlwIaXMBcuob6RkuVDMeWmMbSaSFw1Jl5POJ5775WgJpV8UPXK1E99_cuOeaeZtZopPEw5jnZZa15UUda9HR_BePyXeHEtuGtDcRkY4hm2GQVrq7plCqVTwn7eQCVdWz-gwNFawGGNuJc9kX0r0qkixo0TUS5rwhuMmq3BlLP6X4EpvmP7pdonmj8rSugEScDsnSu6n84V2fqheKwT2UZr7z7VM0OBSHP9APLMyogaJkNKHnawzLTAqmLQJIPwxjVEaNFZYFXdEiv3"/>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-bold">Mert</span> contributed to <span class="text-primary font-semibold">"School Friends Group"</span>
+</p>
+<span class="text-secondary font-label-sm text-label-sm">45dk önce</span>
+</div>
+<div class="text-right">
+<span class="text-tertiary font-bold text-label-md">+₺500</span>
+</div>
+</div>
+<!-- Standard Activity: Payout -->
+<div class="bg-white rounded-[24px] p-4 border border-[#E7E2DA] flex items-center gap-4 transition-transform active:scale-[0.98]">
+<div class="relative w-14 h-14 flex-shrink-0">
+<img alt="Ayşe" class="w-full h-full rounded-full object-cover" data-alt="A high-quality studio portrait of a middle-aged woman with a radiant, joyful expression, conveying success and relief. Soft, warm lighting illuminates her face, set against a clean, minimal background that emphasizes the human element of financial prosperity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALNzNg--Qd2f9XZp8TCYecZ0hI-ejjwHY9Xy4T_Tj2AyyKA-79DIPWOSs6NTO9jatyBjDoxX7q4iSfTZQPqJWyQg1C6piLTwLhYsucOggSV6ZysybfYasRx9zhFK_EcqmhIAOk2RntDfax5Bb4bnhX2c_fTMlMJvZcA42GFQjaMha536AF8niNyPQOI56_HtgFtiWOBmxWrohjd3b3R5lFRAJTpCJyZ9W_c6xdshGdvbRhc4dFg12DvR0JZ-IgvXo8-i4RXNHPRCLA"/>
+<div class="absolute -top-1 -right-1 w-5 h-5 bg-tertiary-container rounded-full flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[12px] text-white" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-bold">Ayşe</span> received the payout! 🎉
+                    </p>
+<span class="text-secondary font-label-sm text-label-sm">1s önce</span>
+</div>
+<div class="bg-tertiary-container/10 px-3 py-1 rounded-full">
+<span class="text-tertiary font-bold text-label-sm">Ödendi</span>
+</div>
+</div>
+<!-- Standard Activity: New Cycle -->
+<div class="bg-white rounded-[24px] p-4 border border-[#E7E2DA] flex items-center gap-4 transition-transform active:scale-[0.98]">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">refresh</span>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-on-surface">
+                        New cycle started for <span class="font-bold">"Family Savings"</span>
+</p>
+<span class="text-secondary font-label-sm text-label-sm">3s önce</span>
+</div>
+<button class="text-primary material-symbols-outlined">chevron_right</button>
+</div>
+<!-- Milestone: Target Reached -->
+<div class="bg-white rounded-[24px] p-6 border border-[#E7E2DA] soft-shadow mt-4">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant">trending_up</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Community Growth</h4>
+<p class="text-secondary font-label-sm text-label-sm">Together we are stronger</p>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-on-surface-variant font-body-sm text-body-sm">
+                        Total savings in your social circle reached <span class="text-primary font-bold">₺150,000</span> this month!
+                    </p>
+<div class="w-full bg-secondary-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: 75%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-secondary">
+<span>Current: ₺150k</span>
+<span>Goal: ₺200k</span>
+</div>
+</div>
+</div>
+<!-- Another Activity: Joined -->
+<div class="bg-white rounded-[24px] p-4 border border-[#E7E2DA] flex items-center gap-4 transition-transform active:scale-[0.98] mt-4">
+<div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+<img alt="Can" class="w-full h-full object-cover" data-alt="A stylish young man looking thoughtfully into the distance, captured with soft depth of field and warm lighting. The aesthetic is clean and modern, evoking a sense of calm and social connection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2QGKVeAGq-ZOrLg9NhoDjsHbd3Fup5XajtOOHyNxrY18kP-YfP0VKiN0ZGXy3-cB30nDmROgoc6FDrn8OfAZTnhqM0TEf_FfwJTua-HkC8JiDC-FjZbEA2wFJK4rVrT08YjMEg7BBi3peHfEMAGByOiEjrUGuvY2cuZdNBlO0qL9DbGcliAasfImofGAsDsIc9RXVOiidPzm72GCoPYxcEFn0M28JGv6ekYlzo1txo9NvzsazxgeN777t6lZc-abBFHUn-LZbd4X5"/>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-bold">Can</span> joined the <span class="text-primary font-semibold">"College Fund"</span> group
+                    </p>
+<span class="text-secondary font-label-sm text-label-sm">5s önce</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface-container-lowest rounded-t-xl shadow-sm">
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-container opacity-70 hover:bg-secondary-container/20 px-4 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-sm text-label-sm-mobile">Groups</span>
+</a>
+<!-- ACTIVE TAB: Activity -->
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-container text-on-primary-container rounded-full px-4 py-1.5 scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-label-sm text-label-sm-mobile">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-container opacity-70 hover:bg-secondary-container/20 px-4 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-label-sm text-label-sm-mobile">Contribute</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-container opacity-70 hover:bg-secondary-container/20 px-4 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm-mobile">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-container opacity-70 hover:bg-secondary-container/20 px-4 py-1.5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm-mobile">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for tapping cards
+        document.querySelectorAll('.active\\:scale-\\[0\\.98\\]').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Atmosphere Effect: Gentle floating of the milestone card background circle
+        const circle = document.querySelector('.group .absolute');
+        if (circle) {
+            let angle = 0;
+            setInterval(() => {
+                angle += 0.05;
+                const x = Math.sin(angle) * 10;
+                const y = Math.cos(angle) * 10;
+                circle.style.transform = `translate(${x}px, ${y}px)`;
+            }, 50);
+        }
+    </script>
+</body></html>

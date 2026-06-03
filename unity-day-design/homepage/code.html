@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dijital Altın Günü - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#e1dfdb",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "primary-fixed-dim": "#f0bf5c",
+                    "tertiary-container": "#53b656",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-secondary-container": "#63635f",
+                    "surface-container-highest": "#e4e2e1",
+                    "surface-container": "#f0eded",
+                    "on-secondary-fixed": "#1b1c19",
+                    "inverse-surface": "#303030",
+                    "on-primary-fixed-variant": "#5d4200",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#4b3500",
+                    "surface-bright": "#fcf9f8",
+                    "secondary": "#5e5e5b",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#f0bf5c",
+                    "tertiary": "#006e1c",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-fixed": "#e4e2dd",
+                    "surface-dim": "#dcd9d9",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0f0",
+                    "surface-tint": "#7b5900",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#c89b3c",
+                    "on-primary-fixed": "#261900",
+                    "tertiary-fixed": "#94f990",
+                    "surface-variant": "#e4e2e1",
+                    "outline": "#807665",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-container": "#00420d",
+                    "on-tertiary-fixed": "#002204",
+                    "on-surface-variant": "#4e4637",
+                    "outline-variant": "#d2c5b1",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "on-background": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffdea4",
+                    "background": "#fcf9f8",
+                    "primary": "#7b5900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-margin": "48px",
+                    "stack-gap-md": "24px",
+                    "stack-gap-sm": "12px",
+                    "container-padding-mobile": "20px",
+                    "base": "8px",
+                    "container-padding-desktop": "40px",
+                    "stack-gap-lg": "40px"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FAF8F3;
+            color: #1b1c1c;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .soft-card {
+            background: #FFFFFF;
+            border: 1px solid #E7E2DA;
+            box-shadow: 0px 10px 30px rgba(200, 155, 60, 0.05);
+            border-radius: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .soft-card:active {
+            transform: scale(0.98);
+        }
+        .glow-active {
+            box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px #4CAF50;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="bg-surface sticky top-0 z-40 flex justify-between items-center px-container-padding-mobile py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Selin" class="w-12 h-12 rounded-full object-cover border-2 border-primary-container" data-alt="A warm and friendly professional headshot of a young woman with a kind smile, set against a soft, blurred domestic background. The lighting is natural and high-key, emphasizing a light-mode aesthetic. The color palette is composed of soft creams, whites, and subtle golden highlights, reflecting a sense of community and social trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvN8JsL_Xw64oiDHh_v9qXgGJS2OqxDfRNCPrxfqXxOQyjh3BFT7cwsS-qc7dEiu7LxzTmI9UwwV79gOshtStYvgcvPdeAMyABPRD19d3C8SG3yH08wITWkXX5Yx4FlxnMnFVlnIpTsEjr5yDbR97aaiZ6Az1FdrUnvXAXB_3gD4Bu4cAQ7uHZqzKDVrMELmQ_J-JB0XcaJXhMZ5qJ7R9tfk64MQI7izZV_j1bLRWpcSFqCtP7-kZY99hHMGBHBKvht86PhJyBOjUu"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-tertiary rounded-full border-2 border-white"></div>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary">Hoş geldin,</p>
+<h1 class="font-headline-sm text-headline-sm-mobile text-primary font-extrabold tracking-tight">Selin!</h1>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-secondary-container/20 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="max-w-[1200px] mx-auto px-container-padding-mobile py-6 space-y-stack-gap-lg">
+<!-- Next Payout Section (Hero Intent) -->
+<section class="relative overflow-hidden p-6 rounded-[24px] bg-gradient-to-br from-[#FFF9F0] to-[#FFFFFF] border border-[#E7E2DA] shadow-[0px_10px_30px_rgba(200,155,60,0.08)]">
+<div class="relative z-10 flex justify-between items-start">
+<div class="space-y-2">
+<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm rounded-full">Sıradaki Ödeme</span>
+<h2 class="font-headline-md text-headline-md text-on-surface pt-2">Aylin'in Günü</h2>
+<p class="font-body-md text-body-md text-secondary">14 Kasım Perşembe</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="w-16 h-16 rounded-full border-4 border-white glow-active overflow-hidden">
+<img alt="Aylin" class="w-full h-full object-cover" data-alt="A close-up portrait of a cheerful middle-aged woman with warm eyes and a friendly expression. The scene is bright and airy, using soft focus for the background to emphasize her presence. The lighting is warm and golden, complementing a modern tactile UI design that focuses on human connection and safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHtv-qo4k4BppEckSKImYRXkhrHIOcWr4jXkYLFyAGyHj1KQH3EeZeVF25NL6jsqRxf7WCJnQM_E8pR4wkxFbKYJqKIl0c3Bh3tfpyKEPO8qPiK9Eo10PMyMFJEwP_qxOpU3Rw3sQBLfCJ21au9Dui3bB1iST7FrqN1NQdcnjx-ZJop8UEas42OqmNkla269w33NKQ9rrOnHpdynSVDmG14rj_J1BVdf17B64nKWcN-t0BmT1WCx9g9QzgPcXGKAiKPPiOKJI2kZXe"/>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-white" data-alt="A portrait of a smiling man." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAechY2Ce8cWWW63QFY-87rCtxWTxF-Pl-DJ1kWkJb_Av-sYXqectL-irbT8QWUFWG3uDTjDNzQMFqBsNiQqU5wSvq4Pjob_ugSkgFrBNHq0YkVjZYrusoeOqGcA6vQ9HNLaowNaDIu-DwWBNXxQPA-59BALmTkFUViBqB-pwpu7aR6JJoFquIRXzO1hGMJV-m_4Ws7ZZj9C5Svw_wZREaCJk4fgftLv9Mkpg_EL7tEEdGRtbObglLvROS10teslxbMApP5qDg6UhWy"/>
+<img class="w-8 h-8 rounded-full border-2 border-white" data-alt="A portrait of a smiling woman." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChOoKu60McBrfvDwFrjYH2PX5ctljKevZYXc4ErG5vukdw8rjJydnJvNAF4fgRQHDQWxdoaVNzyAIciBejDpQ7TVOfJRUWzF5UIbGRJuyYK4x-dYa6wyW-wGIj4eZ9ACQY5v9pdpnRA3_thD5S9wRBWdMTVypOV_B9iizqqeiaz1WK-TNA3urkXD2EszmMVcOdpbHxa2xhYOP5iJKRFDu-Mb_Duf810QkDFUiIZ9GiaPoYjtjzVvldF8pdNy5qxxsYTCIr_jvzqxoS"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-secondary-fixed flex items-center justify-center text-[10px] font-bold text-secondary">+8</div>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-[20px] font-label-md text-label-md hover:opacity-90 transition-opacity flex items-center gap-2">
+                    Katılım Onayla
+                    <span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+</button>
+</div>
+<!-- Background Decoration -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-container/10 rounded-full blur-3xl"></div>
+</section>
+<!-- Active Groups Section -->
+<section class="space-y-4">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Aktif Grupların</h3>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1">Tümü <span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span></button>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-container-padding-mobile px-container-padding-mobile">
+<!-- Group Card 1 -->
+<div class="soft-card min-w-[280px] p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-primary-fixed-dim/20 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="coffee">coffee</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-2 py-1 rounded-md">8/12 Ay</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Pazar Kahvaltısı Grubu</h4>
+<p class="font-body-sm text-body-sm text-secondary">5.000 TL / Ay</p>
+</div>
+<div class="space-y-2 pt-2">
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 66%"></div>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border border-white" data-alt="Group member portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqw5bkyo83nUkzQ5AO_JhZZUGsQgPdZuvO7S6N--ZKWAZzkH3UiCymV3TW9JVY1bgQ8LSDwS89jmGMc-gS-hfPt8jvq_OE1QYqM24ra-6OUoohJIwWtMwjl8ZQ4nF1H693i-aML3FSQ_6XOT7P_Oy04hE1Zxy2cQu8hcxZq86zG9RENHSIfRmg_WlGOJeR9QnfvwkRxnELRmARGD5Ief0DrkIhO6bxemkSOrAZ0qz_mDjNja-7vorWLHHAyP7Pt_pTXzSC6fDu1D6p"/>
+<img class="w-6 h-6 rounded-full border border-white" data-alt="Group member portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7veeP5o2FIxX61o0Up0MaNsvNyRQQFJwfK4kqXcK-_oA43UnqIdRUGkGj_9NT3fN6vDcd4wh4P4kmEeMsI20zrwfidu60bhaCpm336rF9nd3y5pQv-thccKyUIlhulp8sDdZLmZSOU5J-RKJ3Udko9pVx9jG9sDlt7hbm4uGBw-1hB4pDDrZWceF4VRGDfVBFsXX-_JrKM24H2HbRkBwpYo5Sy09aGBG1Mz3ylpuPN-XBzVpI61w_iv9KuvVEE4MieLxJo-kFU78V"/>
+<div class="w-6 h-6 rounded-full border border-white bg-secondary-fixed flex items-center justify-center text-[8px] font-bold text-secondary">+10</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Aktif
+                            </span>
+</div>
+</div>
+</div>
+<!-- Group Card 2 -->
+<div class="soft-card min-w-[280px] p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="house">house</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-low px-2 py-1 rounded-md">2/24 Ay</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Gelecek Birikimi</h4>
+<p class="font-body-sm text-body-sm text-secondary">2.500 TL / Ay</p>
+</div>
+<div class="space-y-2 pt-2">
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 15%"></div>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border border-white" data-alt="Group member portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGcJO0FDHWyi2DfQWJlkGxzLC6Vh0ohotKd_eD00atq3fJnHcaLRIIrmB7lrrxIRP3DXPy6kJnvWaR54yIFIRM4ZRuEuGzqJ1THeLo8bppE1Laf0pMQ1o5msOMXVYlhiU4vYy-9d3zKe3rhldd7sH2wVBfpJbcYNeRDSndPkgt_oODuEY45fObGqj2SAhXtVG0Yb1dlG3zzL7pOpk73rbWSRB5152s0Rib08FbLpCk0hsZCtI7l39T0MM77RH1Nq8v6j33AWFFJg-P"/>
+<div class="w-6 h-6 rounded-full border border-white bg-secondary-fixed flex items-center justify-center text-[8px] font-bold text-secondary">+23</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Sıran Bekleniyor</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity Section -->
+<section class="space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Son Hareketler</h3>
+<div class="soft-card p-4 space-y-4">
+<!-- Activity Item 1 -->
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden">
+<img alt="Can" class="w-full h-full object-cover" data-alt="A portrait of a smiling young man in a minimalist light-filled environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZqlYJUKJX76PDUPR-AGA81n3AP6IxIjP6nJHx3b-_l0Zxyvs2oegGBsxT4HpJK8jRS8VdCEOyN5fSYhRikQhaJrn-AQkCgVteEpndOSH7fZg_uoROi4ankLIZhg73s9YPkOUKQ95aNm6Y6JgNF3b8s1OG8KW7IGvVep9q9Bxbmm3WyDxrq_E_soVRgpGudprvC0h4hquXrNTNwowKd4RA5fb28nXfjzSgdta4NGsEvsXYY8nzSqvv1c8a2d2w1-Ds8tU1FpE9WPwW"/>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-surface">Can ödemesini yaptı</p>
+<p class="font-body-sm text-body-sm text-secondary">Lise Arkadaşları Grubu • 2s önce</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]" data-icon="done_all">done_all</span>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Activity Item 2 -->
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden">
+<img alt="Deniz" class="w-full h-full object-cover" data-alt="A portrait of a professional woman with a welcoming expression in a bright workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRTWE78M1KO2ITP0QZqCTbiLXgDY5DPIUyO0pLFrjaOwMOixpXW2MYWUacBUs3mD0cXKea5oVbZ--8KIFCngSvUkKbUK9I-vLhquD_milam9J1OlYKZnsylhuSlgDDA4zHTcpdYMCqnmJOHniaWLusvW5WpWPSDfgAqx5xowKvujaTKBbbyvA-Firx4yxcBYd3Xc6l3sZM6CkVVwkg955RRz_6n7VXsltYeNUwzxT4sKT6WqhkPKj1RuBqTOkR2IGDo7wiStW90M78"/>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-on-surface">Deniz seni bir gruba davet etti</p>
+<p class="font-body-sm text-body-sm text-secondary">Yeni Yıl Tatili Planı • 5s önce</p>
+</div>
+<button class="px-3 py-1 bg-primary-container/10 text-primary font-label-sm text-label-sm rounded-lg">Katıl</button>
+</div>
+</div>
+</section>
+<!-- Visual Anchor (Warm illustration card) -->
+<section class="relative overflow-hidden p-6 rounded-[24px] bg-secondary-fixed text-on-secondary-fixed flex items-center justify-between">
+<div class="z-10 w-2/3">
+<h4 class="font-headline-sm text-headline-sm mb-2">Güvenle Biriktirin</h4>
+<p class="font-body-sm text-body-sm">Topluluk bağlarını dijitalle güçlendiriyor, geleceğinizi birlikte inşa ediyoruz.</p>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1/3 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-[80px] text-primary/20 scale-125 rotate-12" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface-container-lowest rounded-t-xl shadow-[0px_-2px_10px_rgba(200,155,60,0.05)]">
+<!-- Groups (Active) -->
+<button class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-container text-on-primary-container rounded-full px-4 py-1.5 scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label-sm text-label-sm-mobile mt-0.5">Groups</span>
+</button>
+<!-- Activity -->
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-container opacity-70 hover:bg-secondary-container/20 px-4 py-1.5 transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-label-sm text-label-sm-mobile mt-0.5">Activity</span>
+</button>
+<!-- Contribute (FAB style) -->
+<button class="flex flex-col items-center justify-center -translate-y-4">
+<div class="w-14 h-14 bg-primary rounded-full shadow-lg flex items-center justify-center text-white active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[32px]" data-icon="add_circle" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</div>
+<span class="font-label-sm text-label-sm-mobile mt-1 text-on-secondary-container opacity-70">Contribute</span>
+</button>
+<!-- History -->
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-container opacity-70 hover:bg-secondary-container/20 px-4 py-1.5 transition-all">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm-mobile mt-0.5">History</span>
+</button>
+<!-- Profile -->
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-container opacity-70 hover:bg-secondary-container/20 px-4 py-1.5 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm-mobile mt-0.5">Profile</span>
+</button>
+</nav>
+<script>
+        // Subtle interaction for activity items
+        document.querySelectorAll('.soft-card').forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Atmospheric micro-interaction: subtle glow animation for active turn
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes softGlow {
+                0% { box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px #4CAF50; }
+                50% { box-shadow: 0 0 0 5px #FFFFFF, 0 0 0 10px rgba(76, 175, 80, 0.4); }
+                100% { box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 6px #4CAF50; }
+            }
+            .glow-active {
+                animation: softGlow 3s infinite ease-in-out;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body></html>

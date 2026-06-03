@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dijital Altın Günü - Giriş Yap</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fcf9f8",
+                    "tertiary": "#006e1c",
+                    "surface-dim": "#dcd9d9",
+                    "primary": "#7b5900",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-fixed": "#e4e2dd",
+                    "primary-fixed-dim": "#f0bf5c",
+                    "inverse-surface": "#303030",
+                    "surface-container": "#f0eded",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-surface-variant": "#4e4637",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#f0bf5c",
+                    "on-tertiary-fixed": "#002204",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-fixed": "#1b1c19",
+                    "tertiary-container": "#53b656",
+                    "outline": "#807665",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "on-primary-fixed": "#261900",
+                    "on-surface": "#1b1c1c",
+                    "secondary-fixed-dim": "#c8c6c2",
+                    "outline-variant": "#d2c5b1",
+                    "secondary": "#5e5e5b",
+                    "on-primary-fixed-variant": "#5d4200",
+                    "on-secondary-container": "#63635f",
+                    "tertiary-fixed": "#94f990",
+                    "surface-bright": "#fcf9f8",
+                    "surface": "#fcf9f8",
+                    "primary-container": "#c89b3c",
+                    "surface-container-low": "#f6f3f2",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#7b5900",
+                    "primary-fixed": "#ffdea4",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2e1",
+                    "on-tertiary-container": "#00420d",
+                    "on-secondary-fixed-variant": "#474744",
+                    "inverse-on-surface": "#f3f0f0",
+                    "on-primary-container": "#4b3500",
+                    "secondary-container": "#e1dfdb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap-lg": "40px",
+                    "container-padding-mobile": "20px",
+                    "container-padding-desktop": "40px",
+                    "base": "8px",
+                    "stack-gap-md": "24px",
+                    "stack-gap-sm": "12px",
+                    "section-margin": "48px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layer {
+            background: #ffffff;
+            border: 1px solid #E7E2DA;
+            box-shadow: 0px 10px 30px rgba(200, 155, 60, 0.08);
+        }
+        .input-focus-ring:focus {
+            outline: none;
+            border-color: #c89b3c;
+            box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.1);
+        }
+        .gold-blob {
+            position: absolute;
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            background: radial-gradient(circle, #C89B3C 0%, transparent 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen text-on-background">
+<!-- Ambient Decorative Elements -->
+<div class="gold-blob w-[400px] h-[400px] -top-20 -right-20"></div>
+<div class="gold-blob w-[300px] h-[300px] bottom-10 -left-20"></div>
+<main class="flex-grow flex flex-col items-center justify-center px-container-padding-mobile md:px-container-padding-desktop py-12">
+<!-- Header / Logo Area -->
+<header class="w-full max-w-md text-center mb-stack-gap-lg">
+<div class="inline-flex items-center justify-center w-16 h-16 bg-primary-container rounded-full mb-stack-gap-md shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-on-primary-container text-[32px]" data-icon="savings">savings</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary tracking-tight mb-2">
+                Dijital Altın Günü
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant opacity-80">
+                Tekrar Hoş Geldin!
+            </p>
+</header>
+<!-- Login Card -->
+<div class="w-full max-w-md tonal-layer rounded-[24px] p-6 md:p-10">
+<form action="#" class="space-y-stack-gap-md" method="POST">
+<!-- Identifier Input -->
+<div class="space-y-stack-gap-sm">
+<label class="font-label-md text-label-md text-on-surface-variant ml-2" for="identifier">
+                        Telefon Numarası veya E-posta
+                    </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-outline-variant">mail</span>
+<input class="w-full h-[56px] pl-[52px] pr-5 bg-background border border-outline-variant rounded-[20px] font-body-md text-body-md input-focus-ring transition-all" id="identifier" name="identifier" placeholder="ornek@mail.com" required="" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-stack-gap-sm">
+<div class="flex items-center justify-between px-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">
+                            Şifre
+                        </label>
+<a class="font-label-md text-label-md text-primary hover:underline transition-all" href="#">
+                            Şifremi Unuttum
+                        </a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-outline-variant">lock</span>
+<input class="w-full h-[56px] pl-[52px] pr-14 bg-background border border-outline-variant rounded-[20px] font-body-md text-body-md input-focus-ring transition-all" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-5 top-1/2 -translate-y-1/2 text-outline-variant hover:text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Primary Action -->
+<button class="group relative w-full h-[56px] bg-primary-container text-on-primary-container rounded-[20px] font-headline-sm text-headline-sm flex items-center justify-center gap-2 overflow-hidden hover:opacity-95 active:scale-[0.98] transition-all duration-200" type="submit">
+<span class="z-10">Giriş Yap</span>
+<span class="material-symbols-outlined text-[20px] z-10 transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+<div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:animate-[shimmer_2s_infinite]"></div>
+</button>
+</form>
+<!-- Social Login / Divider -->
+<div class="relative my-8">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant opacity-30"></div>
+</div>
+<div class="relative flex justify-center text-label-sm font-label-sm">
+<span class="px-4 bg-white text-outline">veya şunlarla devam et</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="h-[56px] flex items-center justify-center gap-3 border border-outline-variant rounded-[20px] hover:bg-surface-container-low active:scale-95 transition-all">
+<img alt="Google" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA06XB27w4rWUxj5FimtvAUAjIUJuuHnOBKAhMxB9KVGuhr3XEv0-QYsTe_xvVjJYYpk0GKB2-daACcsfycEQr4fYCV1u1WWgiftN2cwPOsQUr2w92TwpGryPC7sWzcIsoQnKIPT8CxxMP0MIJpm1NUMlxMUmuvJcskUDRnkTaxnj6oeT_IXMjQT2t4i6cDm0XwRY8aXDLxiRZaHmw5t4T2UV9T6iEqPWbaR4JuuZ7pImIY2ODZ9GmPbJESrnYIvnFvTIl2nG_rO-9h"/>
+<span class="font-label-md text-label-md">Google</span>
+</button>
+<button class="h-[56px] flex items-center justify-center gap-3 border border-outline-variant rounded-[20px] hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-blue-600" data-icon="facebook" data-weight="fill" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+<span class="font-label-md text-label-md">Facebook</span>
+</button>
+</div>
+</div>
+<!-- Footer / Signup Link -->
+<footer class="mt-stack-gap-lg text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Hesabın yok mu? 
+                <a class="font-label-md text-label-md text-primary font-bold hover:underline ml-1" href="#">Kayıt Ol</a>
+</p>
+</footer>
+</main>
+<!-- Visual Identity Component (Floating Image/Mood Section) - Desktop Only -->
+<div class="hidden lg:block fixed right-0 top-0 bottom-0 w-1/3 p-container-padding-desktop">
+<div class="w-full h-full rounded-[40px] overflow-hidden shadow-2xl relative">
+<img alt="Community Savings" class="w-full h-full object-cover" data-alt="A warm and inviting photograph of diverse friends sitting around a wooden table in a brightly lit, modern living room. They are sharing a joyful moment, laughing and enjoying tea, with soft golden sunlight streaming through large windows. The overall aesthetic is clean, high-key, and emphasizes community, trust, and shared prosperity with a sophisticated color palette of warm neutrals and gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjQOTY5P9xtjtpNxYl0uJt-8nbQbSQwO85S1dJHLf3PPwlLZiOpcNITkMxUtg0v4EeU-1zWZgmJ3GPeCmL9bYbjyurd4oXa54kDs2pPjVihKpppnh9yzejUPDwT8DNoISrLP1YJP99pD6gBvHRd0bpJ216VIxoNJF3nYGoKxpw3L-TRddiETMIj0mxhkXUVaqvXeBNFZcE9k76azxbfO2SywAbk_p6z-b-GCGq1h-NrqN4txoYhFMNcxIU0UXDjAXjXy577S5rZ6TN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-10">
+<h2 class="text-white font-headline-lg text-headline-lg mb-4">Birikimin En Sosyal Hali</h2>
+<p class="text-white/80 font-body-lg text-body-lg max-w-sm">Geleneksel altın günü kültürünü dijitalin güveni ve hızıyla buluşturuyoruz.</p>
+</div>
+</div>
+</div>
+<script>
+        // Micro-interaction for shimmer effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shimmer {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100%); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Simple password visibility toggle
+        const toggleBtn = document.querySelector('button span:contains("visibility")') || document.querySelector('button span.material-symbols-outlined:last-of-type');
+        if (toggleBtn) {
+            const passwordInput = document.getElementById('password');
+            toggleBtn.parentElement.addEventListener('click', () => {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                toggleBtn.textContent = type === 'password' ? 'visibility' : 'visibility_off';
+            });
+        }
+    </script>
+</body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dijital Altın Günü - Kayıt Ol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fcf9f8;
+            color: #1b1c1c;
+        }
+        .soft-elevation {
+            box-shadow: 0px 10px 30px rgba(200, 155, 60, 0.08);
+        }
+        .avatar-float {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        .avatar-float-delayed {
+            animation: floating 8s ease-in-out infinite -2s;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcf9f8",
+                        "tertiary": "#006e1c",
+                        "surface-dim": "#dcd9d9",
+                        "primary": "#7b5900",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed": "#e4e2dd",
+                        "primary-fixed-dim": "#f0bf5c",
+                        "inverse-surface": "#303030",
+                        "surface-container": "#f0eded",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-surface-variant": "#4e4637",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#f0bf5c",
+                        "on-tertiary-fixed": "#002204",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#005313",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed": "#1b1c19",
+                        "tertiary-container": "#53b656",
+                        "outline": "#807665",
+                        "tertiary-fixed-dim": "#78dc77",
+                        "on-primary-fixed": "#261900",
+                        "on-surface": "#1b1c1c",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "outline-variant": "#d2c5b1",
+                        "secondary": "#5e5e5b",
+                        "on-primary-fixed-variant": "#5d4200",
+                        "on-secondary-container": "#63635f",
+                        "tertiary-fixed": "#94f990",
+                        "surface-bright": "#fcf9f8",
+                        "surface": "#fcf9f8",
+                        "primary-container": "#c89b3c",
+                        "surface-container-low": "#f6f3f2",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#7b5900",
+                        "primary-fixed": "#ffdea4",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e4e2e1",
+                        "on-tertiary-container": "#00420d",
+                        "on-secondary-fixed-variant": "#474744",
+                        "inverse-on-surface": "#f3f0f0",
+                        "on-primary-container": "#4b3500",
+                        "secondary-container": "#e1dfdb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "40px",
+                        "container-padding-mobile": "20px",
+                        "container-padding-desktop": "40px",
+                        "base": "8px",
+                        "stack-gap-md": "24px",
+                        "stack-gap-sm": "12px",
+                        "section-margin": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex flex-col items-center justify-center relative overflow-x-hidden">
+<!-- Decorative Avatars for "Social Trust" -->
+<div class="hidden md:block absolute top-20 left-10 avatar-float">
+<img alt="" class="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover" data-alt="A warm and friendly professional headshot of a woman in her 30s smiling warmly. The lighting is soft and natural, reflecting a bright and trustworthy lifestyle aesthetic. The background is a clean, minimalist off-white room, fitting the Modern Tactile design system. The image evokes a sense of community and safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkw19jM8B96qdiOdWVQJC2XDEqZByXZkspaNFYg_cmt0h9ieQrUOKGtHeL2xDddLVJcy8t3IQfu1xkEZmmChkJjNEIse_-JSklyHTKqPSVeDKoTfNOjPbmmYbR9Vt9NVa8vOlS1JRUlTjglGyQa8e4MSpg3cIMDrf09uu7ObphoJIILohpcYWTdgVfjwjcYEF9VkWeABv20u_UMPPat05slD0tQA2qR4YqRQjeL726_LK1mVHeqy-2c6BBu2OipUL933YtX3Mdi4hF"/>
+</div>
+<div class="hidden md:block absolute bottom-20 right-10 avatar-float-delayed">
+<img alt="" class="w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover" data-alt="A portrait of a cheerful, middle-aged man with a friendly expression. He is wearing a casual linen shirt in a warm earth tone. The setting is a cozy, brightly lit sunroom with blurred indoor plants. The overall mood is welcoming and dependable, consistent with a community savings platform visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhxWhw2Gjg765LeL0t1lKR4q34dLaYjsRI4gQK_oI9HJdeqcLQXBNLKXcedo2khxwyCIWH3FYAMnLChvD5ast_npOJ8qZTBaJ6kPNGqBmlDn-fUFAjtEM_yUlX8cLlXf-cGB8CIRwfBWWb-HC_OEh-agyAnyT-3BTnJJJIgEYZLkJCH-NX-a05NMZXW5JjS-_AJ52RXzHwB8PLkI4LYMz9moPRju-_uXRgj0TTvuRsoMulha-O-9toHEIQyeHokbaEioj-PDnafty2"/>
+</div>
+<div class="hidden lg:block absolute top-1/2 left-24 opacity-40 avatar-float-delayed">
+<img alt="" class="w-20 h-20 rounded-full border-2 border-white shadow-md object-cover" data-alt="A joyful young woman laughing, captured in high-key natural light. The photograph uses a soft-focus background that highlights her friendly face. The color palette is composed of warm creams and gentle golds, mirroring the primary design tokens of the digital gold day application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo-6koRcupg-wSG9XwzgM_s4eYRl3y50SSr8jZHvRAZoOfmS8aVZWEcy37DhJAiqJjKK8pfvmJQP5UFSB5fEOjtXvWgwFkNE1uhZbxmoK8_q2I5uUehi1F4w0Ugo2JklrL4P14X0tNSoqGLbruenuGK_l5Q1HW0j0gXIDq4qmuT2KyCPmfVTmOyX9jmjCJHkLpaUOXguRncuDNUHfMZ7G8AFrIOM-U11Nyf__eA-BEyNkgw5VMXAXY-OHgO0PAsqDcyCl8Bn523-JH"/>
+</div>
+<!-- Main Navigation Header (Shared Component: TopAppBar - Linear Suppression Applied) -->
+<header class="w-full top-0 left-0 fixed bg-background flex items-center px-container-padding-mobile py-6 max-w-full z-40">
+<button class="flex items-center justify-center w-12 h-12 rounded-full hover:bg-surface-container transition-colors active:scale-95 duration-200" onclick="history.back()">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<div class="flex-1 flex justify-center pr-12">
+<span class="font-headline-md text-headline-md-mobile text-primary tracking-tight">Dijital Altın Günü</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-[500px] px-container-padding-mobile mt-24 mb-12 flex flex-col z-10">
+<!-- Progress Indicator -->
+<div class="flex flex-col gap-base mb-stack-gap-md">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Kayıt Adımı</span>
+<span class="font-label-md text-label-md text-primary">2 / 3</span>
+</div>
+<div class="w-full h-3 bg-secondary-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-2/3 transition-all duration-700 ease-out"></div>
+</div>
+</div>
+<!-- Headline & Subheadline -->
+<div class="flex flex-col gap-base mb-stack-gap-lg">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">Seni Tanıyalım</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Profilini oluşturmak için bilgini gir.</p>
+</div>
+<!-- Signup Form Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-6 md:p-8 soft-elevation border border-outline-variant flex flex-col gap-stack-gap-md">
+<!-- Full Name Input -->
+<div class="flex flex-col gap-base">
+<label class="font-label-md text-label-md text-on-surface ml-2" for="full_name">Ad Soyad</label>
+<div class="relative group">
+<input class="w-full h-[56px] px-6 rounded-[20px] bg-background border border-outline-variant focus:border-primary focus:ring-0 transition-all outline-none font-body-md text-body-md" id="full_name" placeholder="Örn: Ayşe Yılmaz" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container">person</span>
+</div>
+</div>
+</div>
+<!-- Email Input -->
+<div class="flex flex-col gap-base">
+<label class="font-label-md text-label-md text-on-surface ml-2" for="email">E-posta Adresi</label>
+<div class="relative group">
+<input class="w-full h-[56px] px-6 rounded-[20px] bg-background border border-outline-variant focus:border-primary focus:ring-0 transition-all outline-none font-body-md text-body-md" id="email" placeholder="merhaba@ornek.com" type="email"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container">mail</span>
+</div>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-base">
+<label class="font-label-md text-label-md text-on-surface ml-2" for="password">Şifre</label>
+<div class="relative group">
+<input class="w-full h-[56px] px-6 rounded-[20px] bg-background border border-outline-variant focus:border-primary focus:ring-0 transition-all outline-none font-body-md text-body-md" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<p class="text-[11px] text-on-surface-variant px-2">Şifreniz en az 8 karakter olmalı ve bir rakam içermelidir.</p>
+</div>
+<!-- Terms and Conditions Agreement -->
+<label class="flex items-start gap-3 cursor-pointer group mt-2">
+<div class="relative flex items-center justify-center mt-1">
+<input class="peer appearance-none w-5 h-5 rounded-[6px] border-2 border-outline-variant checked:bg-primary checked:border-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-white text-[16px] scale-0 peer-checked:scale-100 transition-transform pointer-events-none">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+<span class="text-primary hover:underline font-semibold">Kullanım Koşulları</span>'nı ve <span class="text-primary hover:underline font-semibold">Gizlilik Politikası</span>'nı okudum ve kabul ediyorum.
+                </span>
+</label>
+<!-- Primary Action Button -->
+<button class="w-full h-[56px] mt-4 bg-primary-container text-white font-headline-sm rounded-[20px] soft-elevation hover:opacity-90 active:scale-95 transition-all duration-200">
+                Devam Et
+            </button>
+</div>
+<!-- Footer Links (Optional) -->
+<div class="flex justify-center mt-stack-gap-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Zaten hesabın var mı? <a class="text-primary font-bold hover:underline" href="#">Giriş Yap</a>
+</p>
+</div>
+</main>
+<!-- Bottom Decorative "Living Room" Element (Aesthetic Only) -->
+<div class="fixed bottom-0 left-0 w-full h-24 bg-gradient-to-t from-secondary-container/20 to-transparent pointer-events-none"></div>
+<script>
+        // Micro-interactions for input focus effects
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.parentElement.classList.add('scale-[1.01]');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.parentElement.classList.remove('scale-[1.01]');
+            });
+        });
+
+        // Simple visibility toggle for password
+        const passToggle = document.querySelector('button[type="button"]');
+        const passInput = document.getElementById('password');
+        if (passToggle && passInput) {
+            passToggle.addEventListener('click', () => {
+                const isPass = passInput.type === 'password';
+                passInput.type = isPass ? 'text' : 'password';
+                passToggle.querySelector('span').innerText = isPass ? 'visibility_off' : 'visibility';
+            });
+        }
+    </script>
+</body></html>

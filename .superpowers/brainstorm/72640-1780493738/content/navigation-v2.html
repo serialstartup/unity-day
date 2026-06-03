@@ -1,0 +1,73 @@
+<h2>Güncellenmiş Navigasyon Yapısı</h2>
+<p class="subtitle">5 tab — düzeltilmiş içeriklerle.</p>
+
+<div class="mockup">
+  <div class="mockup-header">src/app/ — Dosya Yapısı</div>
+  <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.8">
+    <div style="color:#888">src/app/</div>
+    <div style="margin-left:16px">
+      <div><span style="color:#c89b3c">_layout.tsx</span> <span style="color:#888">— Root layout (font yükleme, auth yönlendirme)</span></div>
+      <div style="margin-top:8px">
+        <div><span style="color:#53b656">(auth)/</span></div>
+        <div style="margin-left:16px">
+          <div>_layout.tsx</div>
+          <div>login.tsx</div>
+          <div>signup-phone.tsx</div>
+          <div>signup-profile.tsx</div>
+          <div>signup-success.tsx</div>
+          <div>onboarding.tsx</div>
+        </div>
+      </div>
+      <div style="margin-top:8px">
+        <div><span style="color:#53b656">(app)/</span></div>
+        <div style="margin-left:16px">
+          <div>_layout.tsx <span style="color:#888">— Tab navigator</span></div>
+          <div style="margin-top:4px"><span style="color:#c89b3c">index.tsx</span> <span style="color:#888">— Home: aktif gruplar, sıradaki kazanan, özet</span></div>
+          <div><span style="color:#c89b3c">activity.tsx</span> <span style="color:#888">— Activity: anlık grup hareketleri + işlem geçmişi</span></div>
+          <div><span style="color:#c89b3c">create.tsx</span> <span style="color:#888">— Create: grup oluştur, istek gönder, altın sınırı</span></div>
+          <div><span style="color:#c89b3c">market.tsx</span> <span style="color:#888">— Market: sanal altın al/sat</span></div>
+          <div><span style="color:#c89b3c">profile.tsx</span> <span style="color:#888">— Profile: ayarlar, istatistikler, rozetler</span></div>
+          <div style="margin-top:6px">
+            <div>groups/ <span style="color:#888">— Grup detay (modal stack)</span></div>
+            <div style="margin-left:16px">[id].tsx</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top:24px" class="mockup">
+  <div class="mockup-header">Tab Bar Detayları</div>
+  <div class="mockup-body">
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <div style="flex:1;min-width:120px;background:white;border:1px solid #e1dfdb;border-radius:10px;padding:12px;text-align:center">
+        <div style="font-size:22px">🏠</div>
+        <div style="font-weight:700;font-size:13px;margin-top:4px">Home</div>
+        <div style="font-size:11px;color:#888;margin-top:4px">Aktif gruplar, sıradaki kazanan, countdown</div>
+      </div>
+      <div style="flex:1;min-width:120px;background:white;border:1px solid #e1dfdb;border-radius:10px;padding:12px;text-align:center">
+        <div style="font-size:22px">📋</div>
+        <div style="font-weight:700;font-size:13px;margin-top:4px">Activity</div>
+        <div style="font-size:11px;color:#888;margin-top:4px">Anlık grup hareketleri + tüm geçmiş işlemler</div>
+      </div>
+      <div style="flex:1;min-width:120px;background:#c89b3c;border-radius:10px;padding:12px;text-align:center;color:white">
+        <div style="font-size:22px">✨</div>
+        <div style="font-weight:700;font-size:13px;margin-top:4px">Create</div>
+        <div style="font-size:11px;margin-top:4px;opacity:0.85">Grup oluştur, istek gönder, altın sınırı belirle</div>
+      </div>
+      <div style="flex:1;min-width:120px;background:white;border:1px solid #e1dfdb;border-radius:10px;padding:12px;text-align:center">
+        <div style="font-size:22px">🪙</div>
+        <div style="font-weight:700;font-size:13px;margin-top:4px">Market</div>
+        <div style="font-size:11px;color:#888;margin-top:4px">Sanal altın al / sat — gerçek para transferi yok</div>
+      </div>
+      <div style="flex:1;min-width:120px;background:white;border:1px solid #e1dfdb;border-radius:10px;padding:12px;text-align:center">
+        <div style="font-size:22px">👤</div>
+        <div style="font-weight:700;font-size:13px;margin-top:4px">Profile</div>
+        <div style="font-size:11px;color:#888;margin-top:4px">İstatistikler, rozetler, ayarlar</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:16px">Activity tab'ı hem anlık grup hareketlerini hem de geçmiş işlemleri tek yerde gösteriyor — filtrelenebilir feed yapısı (Bugün / Bu Hafta / Tüm Zamanlar).</p>
